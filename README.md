@@ -6,6 +6,7 @@
 
 ## General Info
 This browser based web application to ...
+* This is a sentence written by David Nam
 	
 ## Technologies
 Technologies used for this project:
