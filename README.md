@@ -5,7 +5,8 @@
 * [Contents](#content)
 
 ## General Info
-*Hi my name is Samuel.
+* Hi my name is Samuel.
+* This is a line added by David Nam
 	
 ## Technologies
 Technologies used for this project:
