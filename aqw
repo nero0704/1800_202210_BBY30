@@ -1,0 +1,36 @@
+[33mcommit ac275e564a24c9faa2609748a3f582e2e50c24be[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: David Nam <lgg4david@gmail.com>
+Date:   Thu Jan 20 10:32:05 2022 -0800
+
+    Added one line intro to README file for David
+
+[33mcommit 2f2ed8e80dc7e1acd88578ac7526a5cbcea663c6[m
+Merge: 2873eda f8c5eca
+Author: Samuel Song <semuall0108@gmail.com>
+Date:   Thu Jan 20 10:31:46 2022 -0800
+
+    Added one line intro to README file for Samuel
+
+[33mcommit f8c5ecab439e9c08ff7747bd936725897d3b79cb[m
+Author: dinujagunawardana <dgunawardana@my.bcit.ca>
+Date:   Thu Jan 20 10:22:26 2022 -0800
+
+    Added one line intro to README file for Dinuja
+
+[33mcommit 2873eda725eda99230149427aa0eea70abd534b1[m
+Author: Samuel Song <semuall0108@gmail.com>
+Date:   Thu Jan 20 10:04:12 2022 -0800
+
+    Added one line intro to README for Samuel
+
+[33mcommit 261770ac23d027352c70fffaeb09547d08abed4b[m
+Author: David Nam <lgg4david@gmail.com>
+Date:   Thu Jan 20 09:59:41 2022 -0800
+
+    Added a line to general in README for David
+
+[33mcommit adf1d272f2ea16185b9a6e5424ff5f9d5332122a[m
+Author: David Nam <44178278+nero0704@users.noreply.github.com>
+Date:   Thu Jan 20 09:42:12 2022 -0800
+
+    Initial commit

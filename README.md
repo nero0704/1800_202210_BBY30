@@ -7,6 +7,7 @@
 ## General Info
 * Hi my name is Samuel.
 * This is a line added by David Nam
+* This is a line added by Dinuja Guwardana
 	
 ## Technologies
 Technologies used for this project:
