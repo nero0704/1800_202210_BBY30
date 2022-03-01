@@ -1,4 +1,4 @@
-## My Web Application (Add your Title here)
+## Taste Of Home
 
 * [General info](#general-info)
 * [Technologies](#technologies)
@@ -28,11 +28,11 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
-    /blah.jpg                # 
+    /image.jpg               # Dummy Image
 ├── scripts                  # Folder for scripts
-    /blah.js                 # 
+    /script.js               # Dummy JavaScript
 ├── styles                   # Folder for styles
-    /blah.css                # 
+    /style.css               # Dummy CSS
 
 Firebase hosting files: 
 ├── .firebaserc...
