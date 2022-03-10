@@ -21,7 +21,7 @@ body {
 header {
   display: grid;
   background-color: grey;
-  grid-template-columns: 40% 40% 10% 10%;
+  grid-template-columns: auto auto 10% 10%;
   grid-template-rows: 8vh;
   grid-template-areas: "logo . hamburger notification ";
   top: 0;
@@ -70,11 +70,11 @@ footer a {
   display: grid;
   text-align: center;
   text-decoration: none;
-  font-size: 200%;
+  font-size: 150%;
   align-items: center;
   color: white;
 }
 
 footer a:active {
-  background-color: black;
+  font-size: 200%;
 }
