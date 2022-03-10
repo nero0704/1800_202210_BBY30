@@ -54,7 +54,51 @@ header a {
 }
 
 #main {
-  height: 2000px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 30% 70%;
+  grid-template-areas: "welcome welcome" "popular-general popular-prefer";
+  height: 84vh;
+}
+
+#welcome {
+  display: grid;
+  grid-area: welcome;
+  background-color: green;
+}
+
+#popular-general {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10% auto;
+  grid-area: popular-general;
+  row-gap: 1%;
+  column-gap: 2%;
+  padding: 5%;
+  background-color: silver;
+}
+
+#popular-general a {
+  background-color: grey;
+}
+
+#popular-prefer {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 10% auto;
+  grid-area: popular-prefer;
+  row-gap: 1%;
+  column-gap: 2%;
+  padding: 5%;
+  background-color: pink;
+}
+
+#popular-prefer a {
+  background-color: grey;
+}
+
+.article-title {
+  grid-column: 1 / 3;
 }
 
 footer {
