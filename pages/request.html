@@ -40,17 +40,29 @@
       <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
     </header>
 
+    <!--main div for request form-->
     <div id="main">
+      <!-- creates dropdown of catergories -->
       <h1 class='form'>Request Form</h1>
+      <div class="selection">
+        <label class="cater" for="catergory"><strong>Catergory:</strong></label>
+        <select name="snacks" required>
+          <option value="" disabled selected hidden>Select Catergory</option>
+          <option value="Candy">Candy</option>
+      <option value="choc">Chocolate</option>
+      <option value="chips">Chips</option>
+      <option value="drinks">Drinks</option>
+      <option value="drinks">Other</option>
+      </select>
+      </div>
+      <!--request form-->
       <div class="box">
-        <!-- YEEEEEEEEEEEEEEHAW -->
         <div class="form-group">
           <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
         </div>
         <br>
-        <div class="d-flex justify-content-end">
-          <button type="button" class="btn btn -primary">Submit</button>
-        </div>
+        <button class="button" role="button"><strong>Request</strong></button>
+        <button class="cancel" role="button"><strong>Cancel</strong></button>
       </div>
 
     </div>
