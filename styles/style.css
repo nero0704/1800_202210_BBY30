@@ -181,3 +181,91 @@ footer a:active {
   margin-top: 50px;
   margin-left: 55px;
 }
+
+.success {
+  text-align: center;
+  color: white;
+}
+
+.notify {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.return {
+  margin-top: 300px;
+  margin-left: 50px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#c25a4d, #ff2e09);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.return:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.return:active {
+  outline: 0;
+}
+
+.return:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.request {
+  float: right;
+  margin-top: 300px;
+  margin-right: 50px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.request:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.request:active {
+  outline: 0;
+}
+
+.request:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
