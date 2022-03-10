@@ -13,9 +13,15 @@ app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
 
-app.get("/", function(req, res) {
+app.get("/main", function(req, res) {
   // retrieve and send an HTML document from the file system
   let doc = fs.readFileSync("./app/html/main.html", "utf8");
+  res.send(doc);
+});
+
+app.get("/search", function(req, res) {
+  // retrieve and send an HTML document from the file system
+  let doc = fs.readFileSync("./app/html/search.html", "utf8");
   res.send(doc);
 });
 
