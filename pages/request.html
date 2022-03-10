@@ -2,21 +2,18 @@
 <html lang="en">
 
 <head>
-
-
-
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
   <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
 
   <!-- Style -->
   <link rel="stylesheet" href="/styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicons -->
   <link rel="icon" type="images/favicons" href="images/favicons/favicon-16x16.png" sizes="16x16">
@@ -31,47 +28,39 @@
   <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
   <title>Taste Of Home</title>
-
-
-
 </head>
 
 <body>
 
-  <div class="box">
-    <section class="vh-100 gradient-custom">
-      <div class="container py-1 h-100">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
-            <div class="card bg-dark text-white" style="border-radius: 1rem;">
-              <div class="card-body p-5 text-center">
+  <div id="general-container">
 
-                <div class="mb-md-5 mt-md-4 pb-5">
+    <header>
+      <p class='tasteHome'><strong>Taste</strong> of <strong>Home</strong></p>
+      <a href="#Home" id="hamburger"><i class="fa-solid fa-bell"></i></a>
+      <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
+    </header>
 
-                  <!-- YEEEEEEEEEEEEEEHAW -->
-                  <h2 class="fw-bold mb-2 text-uppercase">Taste of Home</h2>
-                  <div class="form-group">
-                    <label for="exampleFormControlTextarea1"></label>
-                    <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="10"></textarea>
-                  </div>
-                  <br>
-                  <br>
-                  <div class="d-flex justify-content-end">
-                    <button type="button" class="btn btn-lg btn-primary pull-right" onclick="writeReview()">Request</button>
-                  </div>
-                </div>
-
-
-
-
-
-
-              </div>
-            </div>
-          </div>
+    <div id="main">
+      <h1 class='form'>Request Form</h1>
+      <div class="box">
+        <!-- YEEEEEEEEEEEEEEHAW -->
+        <div class="form-group">
+          <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
+        </div>
+        <br>
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn -primary">Submit</button>
         </div>
       </div>
-    </section>
+
+    </div>
+
+    <footer>
+      <a href="#Home"><i class="fa-solid fa-house"></i></a>
+      <a href="#Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#Request"><i class="fa-solid fa-pen-to-square"></i></a>
+      <a href="#User"><i class="fa-solid fa-user"></i></a>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </div>
