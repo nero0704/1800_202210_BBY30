@@ -19,32 +19,6 @@ app.get("/", function(req, res) {
   res.send(doc);
 });
 
-// /*
-//  * This one accepts a query string
-//  */
-// app.get("/album", function(req, res) {
-
-//   let formatOfResponse = req.query["format"];
-
-//   // e.g.,: http://localhost:8000/album?format=html
-//   // e.g.,: http://localhost:8000/album?format=json
-//   if (formatOfResponse == "html") {
-//     // MIME type
-//     res.setHeader("Content-Type", "text/html");
-//     res.send(fs.readFileSync("./app/data/albums.html", "utf8"));
-
-//   } else if (formatOfResponse == "json") {
-//     // MIME type
-//     res.setHeader("Content-Type", "application/json");
-//     res.send(fs.readFileSync("./app/data/albums.json", "utf8"));
-
-//   } else {
-//     // just send JSON message
-//     res.send({ status: "fail", msg: "Wrong format!" });
-//   }
-
-// });
-
 // for page not found (i.e., 404)
 app.use(function(req, res, next) {
   // this could be a separate file too - but you'd have to make sure that you have the path
@@ -55,5 +29,5 @@ app.use(function(req, res, next) {
 // RUN SERVER
 let port = 8000;
 app.listen(port, function() {
-  console.log("Running on " + port + "!");
+  console.log("Example app listening on port " + port + "!");
 });
