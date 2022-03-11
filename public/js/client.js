@@ -22,7 +22,6 @@ ready(function() {
 
   window.addEventListener("load", function(e) {
     ajaxGET("/nav", function(data) {
-      console.log("HELLO")
       document.getElementById("footer-nav").innerHTML = data;
     });
   });
