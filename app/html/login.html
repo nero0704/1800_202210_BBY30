@@ -13,10 +13,14 @@
   <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
 
   <!-- Style -->
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/login.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Authentication javascript-->
+  <script src="/js/dist/bundle.js"></script>
+  <script src="/js/client.js"></script>
 
   <!-- Favicons -->
   <link rel="icon" type="images/favicons" href="/img/favicons/favicon-16x16.png" sizes="16x16">
@@ -24,12 +28,6 @@
   <!-- <link rel="icon" type="images/favicons" href="/img/favicon-96x96.png" sizes="96x96"> -->
 
   <!-- fire base link-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
 
   <title>Taste Of Home</title>
 
@@ -50,8 +48,10 @@
     </header>
 
     <div id="main">
-      <div id="loader"></div>
-
+      <input type="text" id="login-email">
+      <input type="text" id="login-password">
+      <button type="button" onclick="window.signup()">Signup</button>
+      <button type="button" onclick="window.login()">login</button>
     </div>
 
     <footer id="footer-nav">
@@ -59,10 +59,9 @@
 
   </div>
 
-  <!-- Authentication javascript-->
-  <script src="/js/firebaseAPI_TOH.js"></script>
-  <script src="/js/client.js"></script>
-  <script src="/js/authentication.js"></script>
+
+
+
 
 </body>
 

@@ -20,7 +20,7 @@ ready(function() {
     xhr.send();
   }
 
-  window.addEventListener("load", function(e) {
+  window.addEventListener("load", () => {
     ajaxGET("/nav", function(data) {
       document.getElementById("footer-nav").innerHTML = data;
     });

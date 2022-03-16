@@ -54,11 +54,11 @@ header a {
 }
 
 #main {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 30% 70%;
-  grid-template-areas: "welcome welcome" "popular-general popular-prefer";
-  height: 84vh;
+  height: 2000px;
+}
+
+input {
+  color: black;
 }
 
 footer {
