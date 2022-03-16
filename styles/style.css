@@ -57,8 +57,13 @@ header a {
 }
 
 #main {
-  height: 650px;
-  overflow: hidden;
+  height: 100vh;
+  overflow-y: hidden;
+  text-align: center;
+}
+
+.col-lg-3 {
+  color: white;
 }
 
 footer {
