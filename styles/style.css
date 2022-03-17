@@ -23,6 +23,13 @@ body {
 #general-container {
   background-color: #4A6572;
   display: grid;
+  height: 100%;
+}
+
+.mainSelection {
+  float: left;
+  margin-left: 47px;
+  margin-bottom: 10px;
 }
 
 header {
@@ -79,6 +86,10 @@ footer {
   position: sticky;
 }
 
+.requestChoice {
+  margin-right: 50px;
+}
+
 footer a {
   display: grid;
   text-align: center;
@@ -109,7 +120,6 @@ footer a:active {
 
 .button {
   float: right;
-  margin-right: 110px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -147,6 +157,7 @@ footer a:active {
 
 .cancel {
   float: left;
+  margin-left: 50px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#c25a4d, #ff2e09);
@@ -167,6 +178,81 @@ footer a:active {
   text-decoration: none;
   vertical-align: baseline;
   white-space: nowrap;
+}
+
+.returnAccount {
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#c25a4d, #ff2e09);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+  margin-top: 15px;
+}
+
+.returnAccount:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.returnAccount:active {
+  outline: 0;
+}
+
+.returnAccount:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
+}
+
+.saveProfile {
+  float: right;
+  margin-right: 110px;
+  align-items: center;
+  background-color: initial;
+  background-image: linear-gradient(#464d55, #25292e);
+  border-radius: 6px;
+  border-width: 0;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  flex-direction: column;
+  font-size: 15px;
+  height: 40px;
+  justify-content: center;
+  outline: none;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+  white-space: nowrap;
+}
+
+.saveProfile:hover {
+  box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
+  opacity: .85;
+}
+
+.saveProfile:active {
+  outline: 0;
+}
+
+.saveProfile:focus {
+  box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
 .cancel:hover {
@@ -291,7 +377,7 @@ footer a:active {
 }
 
 .edit {
-  margin-left: 188px;
+  text-align: center;
   border: none;
   background: none;
   color: rgb(2, 238, 61);

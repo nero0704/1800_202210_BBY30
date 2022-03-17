@@ -44,9 +44,10 @@
     <div id="main">
       <!-- creates dropdown of catergories -->
       <h1 class='form'>Request Form</h1>
-      <div class="selection">
-        <label class="cater" for="catergory"><strong>Catergory:</strong></label>
-        <select name="snacks" required>
+      <div class='mainSelection'>
+        <div class="selection">
+          <label class="cater" for="catergory"><strong>Catergory:</strong></label>
+          <select name="snacks" required>
           <option value="" disabled selected hidden>Select Catergory</option>
           <option value="Candy">Candy</option>
       <option value="choc">Chocolate</option>
@@ -54,6 +55,7 @@
       <option value="drinks">Drinks</option>
       <option value="drinks">Other</option>
       </select>
+        </div>
       </div>
       <!--request form-->
       <div class="box">
@@ -61,8 +63,10 @@
           <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
         </div>
         <br>
-        <a href="requestSuccess.html"><button class="button" role="button"><strong>Request</strong></button></a>
-        <a href="main.html"><button class="cancel" role="button"><strong>Cancel</strong></button></a>
+        <div class="requestChoice">
+          <a href="requestSuccess.html"><button class="button" role="button"><strong>Request</strong></button></a>
+          <a href="main.html"><button class="cancel" role="button"><strong>Cancel</strong></button></a>
+        </div>
       </div>
 
     </div>
