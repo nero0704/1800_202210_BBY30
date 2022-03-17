@@ -218,8 +218,6 @@ footer a:active {
 }
 
 .saveProfile {
-  float: right;
-  margin-right: 110px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
