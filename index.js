@@ -13,7 +13,7 @@ app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
 
-app.get("/main", function(req, res) {
+app.get("/", function(req, res) {
   // retrieve and send an HTML document from the file system
   let doc = fs.readFileSync("./app/html/main.html", "utf8");
   res.send(doc);
@@ -25,11 +25,14 @@ app.get("/search", function(req, res) {
   res.send(doc);
 });
 
-// for page not found (i.e., 404)
-app.use(function(req, res, next) {
-  // this could be a separate file too - but you'd have to make sure that you have the path
-  // correct, otherewise, you'd get a 404 on the 404 (actually a 500 on the 404)
-  res.status(404).send("<html><head><title>Page not found!</title></head><body><p>Nothing here.</p></body></html>");
+app.get("/nav", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./app/data/footer.html", "utf8"));
+})
+
+app.get("/login", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./app/html/login.html", "utf8"));
 });
 
 // RUN SERVER
