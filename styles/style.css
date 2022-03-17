@@ -12,6 +12,10 @@ body {
   margin: 0;
 }
 
+.persInfo {
+  color: white;
+}
+
 .tasteHome {
   color: white;
 }
