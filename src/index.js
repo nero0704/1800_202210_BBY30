@@ -2,6 +2,7 @@ import { initializeApp } from 'firebase/app';
 // import { getAnalytics } from "firebase/analytics";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { signup, login } from "./auth.js";
+import { passwordShow } from './password.js';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBzVgKTLtYr-EncsGWaW1a1qbx1esxkQ14",
@@ -38,3 +39,5 @@ window.login = () => {
   let pw = document.getElementById("login-password").value;
   login(auth, id, pw);
 }
+
+window.passwordShow = () => { passwordShow(); }

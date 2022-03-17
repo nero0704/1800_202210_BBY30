@@ -47,10 +47,10 @@
 
     <div id="main">
 
-      <input type="text" id="login-email">
+      <input type="text" id="login-email" placeholder="Email">
       <div id="password">
-        <input type="password" id="login-password">
-        <i class="fa-solid fa-eye-slash"></i>
+        <input type="password" id="login-password" placeholder="Password">
+        <i class="fa-solid fa-eye" onclick="window.passwordShow()"></i>
       </div>
       <button type="button" onclick="window.login()">login</button>
       <p>Forgot your password? <a href="#help">Get help signing in.</a></p>
