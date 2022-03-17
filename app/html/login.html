@@ -42,20 +42,22 @@
   <div id="general-container">
 
     <header>
-      <p><strong>Taste</strong> of <strong>Home</strong></p>
-      <a href="#Home" id="hamburger"><i class="fa-solid fa-bell"></i></a>
-      <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
+      <p><strong>Taste</strong> <small>of</small> <strong>Home</strong></p>
     </header>
 
     <div id="main">
-      <input type="text" id="login-email">
-      <input type="text" id="login-password">
-      <button type="button" onclick="window.signup()">Signup</button>
-      <button type="button" onclick="window.login()">login</button>
-    </div>
 
-    <footer id="footer-nav">
-    </footer>
+      <input type="text" id="login-email">
+      <div id="password">
+        <input type="password" id="login-password">
+        <i class="fa-solid fa-eye-slash"></i>
+      </div>
+      <button type="button" onclick="window.login()">login</button>
+      <p>Forgot your password? <a href="#help">Get help signing in.</a></p>
+      <p><strong>OR</strong></p>
+      <p>Don't have an account? <a href="#signup">Sign up.</a></p>
+
+    </div>
 
   </div>
 

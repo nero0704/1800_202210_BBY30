@@ -1,7 +1,7 @@
 import { initializeApp } from 'firebase/app';
-import { getAnalytics } from "firebase/analytics";
+// import { getAnalytics } from "firebase/analytics";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { signup, login } from "./auth.js"
+import { signup, login } from "./auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBzVgKTLtYr-EncsGWaW1a1qbx1esxkQ14",
@@ -12,7 +12,7 @@ const firebaseConfig = {
   appId: "1:307553298856:web:f273e6a1b3b0073e46959d",
 };
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const analytics = getAnalytics(app);
 const auth = getAuth();
 
 onAuthStateChanged(auth, (user) => {
@@ -30,15 +30,11 @@ onAuthStateChanged(auth, (user) => {
 window.signup = () => {
   let id = document.getElementById("login-email").value;
   let pw = document.getElementById("login-password").value;
-  console.log(id);
-  console.log(pw);
   signup(auth, id, pw);
 }
 
 window.login = () => {
   let id = document.getElementById("login-email").value;
   let pw = document.getElementById("login-password").value;
-  console.log(id);
-  console.log(pw);
   login(auth, id, pw);
 }
