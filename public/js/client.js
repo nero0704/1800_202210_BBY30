@@ -22,7 +22,11 @@ ready(function() {
 
   window.addEventListener("load", () => {
     ajaxGET("/nav", function(data) {
-      document.getElementById("footer-nav").innerHTML = data;
+      try {
+        document.getElementById("footer-nav").innerHTML = data;
+      } catch (error) {
+        console.log("Footer not found.");
+      }
     });
   });
 });

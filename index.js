@@ -35,6 +35,11 @@ app.get("/login", function(req, res) {
   res.send(fs.readFileSync("./app/html/login.html", "utf8"));
 });
 
+app.get("/signup", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./app/html/signup.html", "utf8"));
+});
+
 // RUN SERVER
 let port = 8000;
 app.listen(port, function() {
