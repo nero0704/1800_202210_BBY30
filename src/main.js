@@ -18,7 +18,26 @@ console.log("Initialized.");
 if (localStorage.getItem('new') == 'true') {
   console.log("New is true.");
   document.getElementById("overlay").classList.add("active");
-}
+};
+
+const tags = document.getElementById("tags-container").querySelectorAll("section");
+tags.forEach((tag) => {
+  tag.addEventListener('click', (t) => {
+    if (tag.classList.contains("active")) {
+      tag.classList.remove("active");
+    } else {
+      tag.classList.add("active");
+    }
+  });
+});
+
+document.getElementById("submit").addEventListener("click", () => {
+  const countries = document.getElementById("tags-container").getElementsByClassName("active");
+  for (let i = 0; i < countries.length; i++) {
+    // TODO: Find a way to remove <class active> from countries[i]
+    console.log(countries[i]);
+  }
+});
 
 onAuthStateChanged(auth, (user) => {
   if (user) {
