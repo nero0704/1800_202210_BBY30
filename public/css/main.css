@@ -18,12 +18,16 @@ body {
   justify-self: center;
   background-color: white;
   border-radius: 30px;
-  display: grid;
+  display: none;
   position: fixed;
   grid-template-rows: 15% 85%;
   max-width: calc(700px * 0.6);
   width: 60vw;
   height: 75vh;
+}
+
+#overlay.active {
+  display: grid;
 }
 
 #overlay p {

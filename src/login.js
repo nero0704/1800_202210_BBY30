@@ -69,7 +69,11 @@ function disableSignup() {
   if (!(document.getElementById("login-email").value &&
       document.getElementById("login-password").value &&
       document.getElementById("login-name").value &&
-      document.getElementById("login-username").value)) {
+      document.getElementById("login-username").value) ||
+    (!(document.getElementById("login-email").value &&
+        document.getElementById("login-password").value) &&
+      (document.getElementById("login-name").value &&
+        document.getElementById("login-username").value))) {
     document.querySelector("button").disabled = true;
   } else {
     document.querySelector("button").disabled = false;
@@ -91,6 +95,7 @@ window.signup = () => {
         name: name,
         username: username
       })
+      localStorage.setItem('new', 'true');
       location.href = "/";
     })
     .catch((error) => {
@@ -108,6 +113,7 @@ window.login = () => {
     .then((userCredential) => {
       // Signed in
       const user = userCredential.user;
+      location.href = "/";
       console.log("Successfully Loged in.");
       // ...
     })
