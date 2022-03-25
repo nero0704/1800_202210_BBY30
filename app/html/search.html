@@ -1,95 +1,96 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-
-
-
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
-
-  <!-- Style -->
-  <link rel="stylesheet" href="/css/search.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- Favicons -->
-  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-32x32.png" sizes="32x32">
-  <!-- <link rel="icon" type="images/favicons" href="/img/favicon-96x96.png" sizes="96x96"> -->
-
-  <!-- Authentication javascript-->
-  <script src="/js/authentication.js"></script>
-  <script src="/js/search.js"></script>
-  <script src="/js/client.js"></script>
-
-  <!-- fire base link-->
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
-  <title>Taste Of Home</title>
-
-
-
+  <link rel="stylesheet" href="../../public/css/search.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="script.js" defer></script>
 </head>
 
 <body>
+  <div class="container">
 
-
-
-  <div id="general-container">
-
-    <div id="main">
-      <div class="search-container">
-        <div class="search">
-          <div class="icon"></div>
-          <div class="input">
-            <input type="text" placeholder="Search" id="mysearch" data-search>
-          </div>
-          <span class="clear" onclick="document.getElementById
+    <div class="search-container">
+      <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+          <input type="text" placeholder="Search" id="mysearch" data-search>
+        </div>
+        <span class="clear" onclick="document.getElementById
         ('mysearch').value = ''"></span>
-        </div>
       </div>
-
-      <h2 id="categories">Popular categories</h2>
-
-      <div class="card-container">
-        <div class="card">
-          <img src="/img/searchImages/chocolate.jpg" class="searchImage">
-          <div class="info">Chocolate</div>
-        </div>
-        <div class="card">
-          <img src="/img/searchImages/candy.jpg" class="searchImage">
-          <div class="info">Candy</div>
-        </div>
-        <div class="card">
-          <img src="/img/searchImages/beverage.jpg" class="searchImage">
-          <div class="info">Beverage</div>
-        </div>
-      </div>
-
-
-
     </div>
 
-    <footer id="footer-nav">
-    </footer>
 
+    <div id="line"></div>
+    <h1>Popular Snacks</h1>
+    <div class="user-cards">
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+      <div class="card">
+        <div class="card-image"></div>
+        <p id="name">Ghana</p>
+        <p id="S-tag">Korea</p>
+        <p id="C-tag">Chocolate</p>
+      </div>
+
+    </div>
   </div>
-
-
-  <script>
-    const icon = document.querySelector('.icon');
-    const search = document.querySelector('.search');
-    icon.onclick = function() {
-
-    }
-  </script>
 
 </body>
 
