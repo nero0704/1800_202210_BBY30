@@ -28,6 +28,25 @@ app.get("/nav", function(req, res) {
   res.send(fs.readFileSync("./app/data/footer.html", "utf8"));
 })
 
+app.get("/new", function(req, res) {
+
+  let formatOfResponse = req.query["format"];
+
+  if (formatOfResponse == "countries") {
+    res.setHeader("Content-Type", "text/html");
+    res.send(fs.readFileSync("./app/data/countries-overlay.html", "utf8"));
+
+  } else if (formatOfResponse == "snacks") {
+    res.setHeader("Content-Type", "text/html");
+    res.send(fs.readFileSync("./app/data/snacks-overlay.html", "utf8"));
+
+  } else {
+    res.send({ status: "fail", msg: "Wrong format!" });
+  }
+
+});
+
+
 app.get("/login", function(req, res) {
   res.setHeader("Content-Type", "text/html");
   res.send(fs.readFileSync("./app/html/login.html", "utf8"));
