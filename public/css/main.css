@@ -13,6 +13,71 @@ body {
   margin: 0;
 }
 
+#overlay {
+  margin: 12.5vh auto;
+  justify-self: center;
+  background-color: white;
+  border-radius: 30px;
+  display: none;
+  position: fixed;
+  grid-template-rows: 15% 70% 15%;
+  max-width: calc(700px * 0.6);
+  width: 60vw;
+  height: 75vh;
+}
+
+#overlay.active {
+  display: grid;
+}
+
+#overlay p {
+  margin: auto;
+  text-align: center;
+  font-size: 3.5vh;
+  color: black!important;
+}
+
+#tags-container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: repeat(9, 1fr);
+  column-gap: 10%;
+  row-gap: 2%;
+  padding: 5%;
+}
+
+#tags-container section {
+  font-size: 1.7vh;
+  text-align: center;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5%;
+}
+
+#tags-container section.active {
+  color: cyan;
+  border: 3px solid black;
+}
+
+#next {
+  width: 40%;
+  height: 40%;
+  justify-self: center;
+  align-self: center;
+  font-size: 20pt;
+  color: black;
+}
+
+#done {
+  width: 40%;
+  height: 40%;
+  justify-self: center;
+  align-self: center;
+  font-size: 20pt;
+  color: black;
+}
+
 #general-container {
   background-color: aqua;
   display: grid;

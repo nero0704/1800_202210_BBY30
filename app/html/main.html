@@ -19,13 +19,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicons -->
-  <link rel="icon" type="images/favicons" href="/img/favicons/favicon-16x16.png" sizes="16x16">
-  <link rel="icon" type="images/favicons" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-32x32.png" sizes="32x32">
   <!-- <link rel="icon" type="images/favicons" href="/img/favicon-96x96.png" sizes="96x96"> -->
-
-  <!-- Authentication javascript-->
-  <script src="/js/authentication.js"></script>
-  <script src="/js/client.js"></script>
 
   <!-- fire base link-->
   <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
@@ -42,7 +38,9 @@
 
 
   <div id="general-container">
+    <div id="overlay">
 
+    </div>
     <header>
       <p><strong>Taste</strong> of <strong>Home</strong></p>
       <a href="#Home" id="hamburger"><i class="fa-solid fa-bell"></i></a>
@@ -82,6 +80,8 @@
   </div>
 
 
+  <!-- Authentication javascript-->
+  <script src="/js/dist/main.bundle.js"></script>
 
 </body>
 

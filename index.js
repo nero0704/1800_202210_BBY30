@@ -14,13 +14,11 @@ app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
 
 app.get("/", function(req, res) {
-  // retrieve and send an HTML document from the file system
   let doc = fs.readFileSync("./app/html/main.html", "utf8");
   res.send(doc);
 });
 
 app.get("/search", function(req, res) {
-  // retrieve and send an HTML document from the file system
   let doc = fs.readFileSync("./app/html/search.html", "utf8");
   res.send(doc);
 });
@@ -30,9 +28,33 @@ app.get("/nav", function(req, res) {
   res.send(fs.readFileSync("./app/data/footer.html", "utf8"));
 })
 
+app.get("/new", function(req, res) {
+
+  let formatOfResponse = req.query["format"];
+
+  if (formatOfResponse == "countries") {
+    res.setHeader("Content-Type", "text/html");
+    res.send(fs.readFileSync("./app/data/countries-overlay.html", "utf8"));
+
+  } else if (formatOfResponse == "snacks") {
+    res.setHeader("Content-Type", "text/html");
+    res.send(fs.readFileSync("./app/data/snacks-overlay.html", "utf8"));
+
+  } else {
+    res.send({ status: "fail", msg: "Wrong format!" });
+  }
+
+});
+
+
 app.get("/login", function(req, res) {
   res.setHeader("Content-Type", "text/html");
   res.send(fs.readFileSync("./app/html/login.html", "utf8"));
+});
+
+app.get("/signup", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./app/html/signup.html", "utf8"));
 });
 
 // RUN SERVER

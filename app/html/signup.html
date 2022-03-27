@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/login.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+
+
+  <!-- Favicons -->
+  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="/img/favicons" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+  <!-- <link rel="icon" type="images/favicons" href="/img/favicon-96x96.png" sizes="96x96"> -->
+
+  <!-- fire base link-->
+
+  <title>Taste Of Home</title>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div id="general-container">
+
+    <header>
+      <p><strong>Taste</strong> <small>of</small> <strong>Home</strong></p>
+    </header>
+
+    <div id="main" class="signup">
+
+      <input type="email" id="login-email" placeholder="Email">
+      <input type="text" id="login-name" placeholder="Full Name">
+      <input type="text" id="login-username" placeholder="UserName">
+      <div id="password">
+        <input type="password" id="login-password" placeholder="Password">
+        <i class="fa-solid fa-eye" id="show-password" onclick="window.showPassword()"></i>
+      </div>
+
+      <button type="button" onclick="window.signup()">Sign up</button>
+
+      <p>Have an account? <a href="/login">Log in</a></p>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Authentication javascript-->
+  <script src="/js/dist/login.bundle.js"></script>
+
+</body>
+
+</html>
