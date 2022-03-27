@@ -1,4 +1,4 @@
-import { init } from './firebaseInit.js';
+import { DB, AUTH, UID, init } from './firebaseInit.js';
 import { doc, updateDoc, collection } from 'firebase/firestore';
 
 // invoke ready and pass in a callback function
@@ -24,18 +24,23 @@ ready(function() {
   }
 
   window.addEventListener("load", () => {
-    const db = init("db");
-    const uid = init("uid");
+
+    init();
+
+    const db = DB();
+    const uid = UID();
 
     if (localStorage.getItem("new") == "true") {
+
+      console.log("New is true");
 
       let countries;
       let snacks;
 
-      ajaxGET("/new?format=countries", async(data) => {
+      ajaxGET("/new?format=countries", (data) => {
 
         document.getElementById("overlay").innerHTML = data;
-        await document.onload;
+        document.onload;
 
         const tags = document.getElementById("tags-container").querySelectorAll("section");
         tags.forEach((tag) => {
@@ -50,13 +55,11 @@ ready(function() {
 
 
 
-
         document.getElementById("next").addEventListener("click", () => {
-          ajaxGET("/new?format=snacks", async(data) => {
+          ajaxGET("/new?format=snacks", (data) => {
 
             countries = document.getElementById("tags-container").getElementsByClassName("active");
             document.getElementById("overlay").innerHTML = data;
-            await document.onload;
 
             const tags = document.getElementById("tags-container").querySelectorAll("section");
             tags.forEach((tag) => {
@@ -71,9 +74,13 @@ ready(function() {
           });
 
 
+
           document.getElementById("done").addEventListener("click", () => {
 
+            localStorage.removeItem("new");
+
             snacks = document.getElementById("tags-container").getElementsByClassName("active");
+
             let countriesData = [];
             let snacksData = [];
 
@@ -90,6 +97,9 @@ ready(function() {
               countries: countriesData,
               tags: snacksData
             });
+
+            document.getElementById("overlay").innerHTML = "";
+
           });
         })
       })
