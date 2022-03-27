@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+
+
+
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +13,7 @@
   <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
 
   <!-- Style -->
-  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/css/dinuja.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -18,19 +21,19 @@
   <!-- Favicons -->
   <link rel="icon" type="images/favicons" href="images/favicons/favicon-16x16.png" sizes="16x16">
   <link rel="icon" type="images/favicons" href="images/favicons/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="images/favicons" href="/favicon-96x96.png" sizes="96x96">
-
-  <!-- Authentication javascript-->
-  <script src="./scripts/authentication.js"></script>
-
-  <!-- fire base link-->
-  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
-  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+  <!-- <link rel="icon" type="images/favicons" href="/favicon-96x96.png" sizes="96x96"> -->
 
   <title>Taste Of Home</title>
+
+
+
 </head>
 
 <body>
+
+
+
+
 
   <div id="general-container">
 
@@ -40,23 +43,28 @@
       <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
     </header>
 
+
+
     <!--main div for request form-->
     <div id="main">
+
       <!-- creates dropdown of catergories -->
       <h1 class='form'>Request Form</h1>
+
       <div class='mainSelection'>
         <div class="selection">
           <label class="cater" for="catergory"><strong>Catergory:</strong></label>
           <select name="snacks" required>
           <option value="" disabled selected hidden>Select Catergory</option>
           <option value="Candy">Candy</option>
-      <option value="choc">Chocolate</option>
-      <option value="chips">Chips</option>
-      <option value="drinks">Drinks</option>
-      <option value="drinks">Other</option>
-      </select>
+          <option value="choc">Chocolate</option>
+          <option value="chips">Chips</option>
+          <option value="drinks">Drinks</option>
+          <option value="drinks">Other</option>
+          </select>
         </div>
       </div>
+
       <!--request form-->
       <div class="box">
         <div class="form-group">
@@ -64,12 +72,14 @@
         </div>
         <br>
         <div class="requestChoice">
-          <a href="requestSuccess.html"><button class="button" role="button"><strong>Request</strong></button></a>
-          <a href="main.html"><button class="cancel" role="button"><strong>Cancel</strong></button></a>
+          <a href="/requestSuccess"><button class="button" role="button"><strong>Request</strong></button></a>
+          <a href="/"><button class="cancel" role="button"><strong>Cancel</strong></button></a>
         </div>
       </div>
 
     </div>
+
+
 
     <footer>
       <a href="#Home"><i class="fa-solid fa-house"></i></a>
@@ -78,8 +88,12 @@
       <a href="#User"><i class="fa-solid fa-user"></i></a>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </div>
+
+
+
+
+
 </body>
 
 </html>
