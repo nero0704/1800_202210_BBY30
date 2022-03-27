@@ -2,6 +2,8 @@ import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
+var app, auth, db, uid;
+
 function init(type) {
   const firebaseConfig = {
     apiKey: "AIzaSyBzVgKTLtYr-EncsGWaW1a1qbx1esxkQ14",
@@ -11,10 +13,9 @@ function init(type) {
     messagingSenderId: "307553298856",
     appId: "1:307553298856:web:f273e6a1b3b0073e46959d",
   };
-  const app = initializeApp(firebaseConfig);
-  const auth = getAuth();
-  const db = getFirestore(app);
-  let uid;
+  app = initializeApp(firebaseConfig);
+  auth = getAuth();
+  db = getFirestore(app);
 
   onAuthStateChanged(auth, (user) => {
     if (user) {
@@ -26,13 +27,26 @@ function init(type) {
     }
   });
 
-  switch (type) {
-    case "db":
-      return db;
-    case "uid":
-      return uid;
-    case "auth":
-      return auth;
-  }
+  // switch (type) {
+  //   case "db":
+  //     return db;
+  //   case "uid":
+  //     return uid;
+  //   case "auth":
+  //     return auth;
+  // }
 }
-export { init };
+
+function DB() {
+  return db;
+}
+
+function AUTH() {
+  return auth;
+}
+
+function UID() {
+  return uid;
+}
+
+export { init, DB, AUTH, UID };

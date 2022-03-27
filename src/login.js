@@ -1,13 +1,13 @@
-import { init } from './firebaseInit';
+import { init, DB, AUTH, UID } from './firebaseInit';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { doc, setDoc, collection } from 'firebase/firestore';
 
-let db = init("db");
-let auth = init("auth");
-
+init();
+let db = DB();
+let auth = AUTH();
 
 
 window.showPassword = () => {
@@ -106,6 +106,6 @@ window.login = () => {
     .catch((error) => {
       const errorCode = error.code;
       const errorMessage = error.message;
-      alert(errorcode);
+      alert(errorCode);
     });
 }
