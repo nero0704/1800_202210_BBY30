@@ -46,6 +46,10 @@ app.get("/new", function(req, res) {
 
 });
 
+app.get("/test", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./app/html/test.html", "utf8"));
+});
 
 app.get("/login", function(req, res) {
   res.setHeader("Content-Type", "text/html");
