@@ -1,9 +1,12 @@
-import { DB, AUTH } from './firebaseInit';
+import { init } from './firebaseInit';
+import { ready } from './client';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { doc, setDoc, collection } from 'firebase/firestore';
+
+ready();
 
 let db = DB();
 let auth = AUTH();

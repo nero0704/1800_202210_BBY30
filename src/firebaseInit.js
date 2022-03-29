@@ -1,8 +1,5 @@
 import { initializeApp } from 'firebase/app';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-
-var app, auth, db, uid;
+import { onAuthStateChanged, getAuth } from 'firebase/auth';
 
 function init() {
   const firebaseConfig = {
@@ -13,30 +10,15 @@ function init() {
     messagingSenderId: "307553298856",
     appId: "1:307553298856:web:f273e6a1b3b0073e46959d",
   };
-  app = initializeApp(firebaseConfig);
-  auth = getAuth();
-  db = getFirestore(app);
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      uid = user.uid;
-      // console.log(uid);
-      console.log("Initialized.");
-    } else {
+  const app = initializeApp(firebaseConfig);
+  onAuthStateChanged(getAuth(), (user) => {
+    console.log(user.uid);
+    if (!user) {
       window.location.href("/login");
+    } else {
+      return user;
     }
   });
 }
 
-function DB() {
-  return db;
-}
-
-function AUTH() {
-  return auth;
-}
-
-function UID() {
-  return uid;
-}
-
-export { init, DB, AUTH, UID };
+export { init };
