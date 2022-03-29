@@ -2,14 +2,21 @@ import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
 import { overlay } from './main-overlay.js';
 import { getFirestore } from 'firebase/firestore';
-import { onAuthStateChanged } from 'firebase/auth';
 
-ready(client);
+run();
 
-const user = init();
-const db = getFirestore();
+async function run() {
 
-if (localStorage.getItem("new") == "true") {
-  console.log("New is true");
-  overlay();
-}
+  ready(client);
+  const user = await init()
+    .catch((error) => {
+      console.log(error)
+      window.location.href = "/login";
+    })
+  const db = getFirestore();
+
+  if (localStorage.getItem("new") == "true") {
+    console.log("New is true");
+    overlay(db, user.uid);
+  }
+};

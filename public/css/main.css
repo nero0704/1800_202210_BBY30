@@ -18,7 +18,7 @@ body {
   justify-self: center;
   background-color: white;
   border-radius: 30px;
-  display: grid;
+  display: none;
   position: fixed;
   grid-template-rows: 15% 70% 15%;
   max-width: calc(700px * 0.6);

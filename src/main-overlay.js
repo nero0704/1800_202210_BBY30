@@ -1,4 +1,5 @@
 import { ajaxGET } from "./client";
+import { updateDoc, doc, collection } from "firebase/firestore";
 
 function overlay(db, uid) {
 
@@ -8,6 +9,7 @@ function overlay(db, uid) {
   ajaxGET("/new?format=countries", (data) => {
 
     document.getElementById("overlay").innerHTML = data;
+    document.getElementById("overlay").style.display = "grid";
     const tags = document.getElementById("tags-container").querySelectorAll("section");
     tags.forEach((tag) => {
       tag.addEventListener('click', () => {
@@ -38,10 +40,6 @@ function overlay(db, uid) {
 
         document.getElementById("done").addEventListener("click", () => {
 
-          localStorage.removeItem("new");
-          document.getElementById("overlay").innerHTML = "";
-          document.getElementById("overlay").style({ display: none });
-
           snacks = document.getElementById("tags-container").getElementsByClassName("active");
 
           let countriesData = [];
@@ -49,20 +47,19 @@ function overlay(db, uid) {
 
           for (let i = 0; i < countries.length; i++) {
             countriesData.push(countries[i].innerHTML);
-            console.log(countries[i].innerHTML);
           }
           for (let i = 0; i < snacks.length; i++) {
             snacksData.push(snacks[i].innerHTML);
-            console.log(snacks[i].innerHTML);
           }
 
           updateDoc(doc(collection(db, "users"), uid), {
             countries: countriesData,
-            tags: snacksData
+            snacks: snacksData
           });
 
-
-
+          localStorage.removeItem("new");
+          document.getElementById("overlay").innerHTML = "";
+          document.getElementById("overlay").style.display = "none";
         });
       });
     })
