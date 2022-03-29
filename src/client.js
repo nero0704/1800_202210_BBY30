@@ -28,20 +28,19 @@ ready(function() {
     init();
 
     const db = DB();
+    console.log(db);
     const uid = UID();
+    console.log(uid);
 
     if (localStorage.getItem("new") == "true") {
 
       console.log("New is true");
-
       let countries;
       let snacks;
 
       ajaxGET("/new?format=countries", (data) => {
 
         document.getElementById("overlay").innerHTML = data;
-        document.onload;
-
         const tags = document.getElementById("tags-container").querySelectorAll("section");
         tags.forEach((tag) => {
           tag.addEventListener('click', () => {
@@ -55,7 +54,7 @@ ready(function() {
 
 
 
-        document.getElementById("next").addEventListener("click", () => {
+        document.getElementById("next").addEventListener("click", async() => {
           ajaxGET("/new?format=snacks", (data) => {
 
             countries = document.getElementById("tags-container").getElementsByClassName("active");
@@ -71,35 +70,33 @@ ready(function() {
                 }
               });
             });
-          });
 
+            document.getElementById("done").addEventListener("click", () => {
 
+              localStorage.removeItem("new");
 
-          document.getElementById("done").addEventListener("click", () => {
+              snacks = document.getElementById("tags-container").getElementsByClassName("active");
 
-            localStorage.removeItem("new");
+              let countriesData = [];
+              let snacksData = [];
 
-            snacks = document.getElementById("tags-container").getElementsByClassName("active");
+              for (let i = 0; i < countries.length; i++) {
+                countriesData.push(countries[i].innerHTML);
+                console.log(countries[i].innerHTML);
+              }
+              for (let i = 0; i < snacks.length; i++) {
+                snacksData.push(snacks[i].innerHTML);
+                console.log(snacks[i].innerHTML);
+              }
 
-            let countriesData = [];
-            let snacksData = [];
+              updateDoc(doc(collection(db, "users"), uid), {
+                countries: countriesData,
+                tags: snacksData
+              });
 
-            for (let i = 0; i < countries.length; i++) {
-              countriesData.push(countries[i].innerHTML);
-              console.log(countries[i].innerHTML);
-            }
-            for (let i = 0; i < snacks.length; i++) {
-              snacksData.push(snacks[i].innerHTML);
-              console.log(snacks[i].innerHTML);
-            }
+              document.getElementById("overlay").innerHTML = "";
 
-            updateDoc(doc(collection(db, "users"), uid), {
-              countries: countriesData,
-              tags: snacksData
             });
-
-            document.getElementById("overlay").innerHTML = "";
-
           });
         })
       })

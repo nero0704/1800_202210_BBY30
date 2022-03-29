@@ -1,15 +1,14 @@
-import { init, DB, AUTH, UID } from './firebaseInit';
+import { DB, AUTH } from './firebaseInit';
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword
 } from "firebase/auth";
 import { doc, setDoc, collection } from 'firebase/firestore';
 
-init();
 let db = DB();
 let auth = AUTH();
 
-
+// Toggles to show password when eye is clicked.
 window.showPassword = () => {
   let icon = document.getElementById("show-password").classList;
   let pass = document.getElementById("login-password");
@@ -24,8 +23,7 @@ window.showPassword = () => {
   }
 };
 
-
-
+// Changes type of an object.
 function changeInputType(oldObject, oType) {
   var newObject = document.createElement('input');
   newObject.type = oType;
@@ -37,14 +35,14 @@ function changeInputType(oldObject, oType) {
   return newObject;
 }
 
-
-
+// Adds eventlistener to input fields.
 const input = document.querySelectorAll("input");
 input.forEach((i) => {
-  i.addEventListener('change', disableSignup);
+  i.addEventListener('change', disableButton);
 })
 
-function disableSignup() {
+// Disable Login & Signup buttons while input field is empty.
+function disableButton() {
   if (window.location.pathname == "/signup") {
     if (!(document.getElementById("login-email").value &&
         document.getElementById("login-password").value &&
@@ -65,9 +63,8 @@ function disableSignup() {
 }
 
 
-
+// Signup function called when Signup button is pressed.
 window.signup = () => {
-
   let id = document.getElementById("login-email").value;
   let pw = document.getElementById("login-password").value;
   let name = document.getElementById("login-name").value;
@@ -83,29 +80,28 @@ window.signup = () => {
         name: name,
         username: username
       })
-      console.log("Done");
+      console.log("Successfully Signed up.");
       localStorage.setItem('new', 'true');
       location.href = "/";
     })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
       alert(errorCode);
     });
 }
 
+// Login function called when Login button is pressed.
 window.login = () => {
   let id = document.getElementById("login-email").value;
   let pw = document.getElementById("login-password").value;
   signInWithEmailAndPassword(auth, id, pw)
     .then((userCredential) => {
+      console.log("Successfully Logged in.");
       const user = userCredential.user;
       location.href = "/";
-      console.log("Successfully Loged in.");
     })
     .catch((error) => {
       const errorCode = error.code;
-      const errorMessage = error.message;
       alert(errorCode);
     });
 }
