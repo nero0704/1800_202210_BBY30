@@ -87,10 +87,6 @@ footer {
   position: sticky;
 }
 
-#requestChoice {
-  margin-right: 100px;
-}
-
 footer a {
   display: grid;
   text-align: center;
