@@ -36,7 +36,7 @@
 
   <div id="general-container">
     <header>
-      <p class="tasteHome"><strong>Taste</strong> of <strong>Home</strong></p>
+      <p id="tasteHome"><strong>Taste</strong> of <strong>Home</strong></p>
       <a href="#Home" id="hamburger"><i class="fa-solid fa-bell"></i></a>
       <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
     </header>
@@ -44,11 +44,16 @@
     <!--main div for request form-->
     <div id="main">
       <!-- creates dropdown of catergories -->
-      <h1 class="form">Request Form</h1>
-      <div class="mainSelection">
-        <div class="selection">
-          <label class="cater" for="catergory"><strong>Catergory:</strong></label>
-          <select name="snacks" required>
+      <h1 id="form">Request Form</h1>
+      <div id="form-group">
+        <label id="title">Title</label>
+        <div id="col-lg-8">
+          <input id="form-control" type="text" value="Enter title of post">
+        </div>
+        <div id="mainSelection">
+          <div id="selection">
+            <label id="cater" for="catergory"><strong>Catergory:</strong></label>
+            <select name="snacks" required>
           <option value="" disabled selected hidden>Select Catergory</option>
           <option value="Candy">Candy</option>
           <option value="choc">Chocolate</option>
@@ -56,29 +61,29 @@
           <option value="drinks">Drinks</option>
           <option value="drinks">Other</option>
           </select>
+          </div>
+        </div>
+
+        <!--request form-->
+        <div id="box">
+          <div id="form-group">
+            <textarea id="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
+          </div>
+          <br>
+          <div id="requestChoice">
+            <button id="submit" href="/requestSuccess" role="button"><strong>Request</strong></button>
+            <button id="cancel" href="/" role="button"><strong>Cancel</strong></button>
+          </div>
         </div>
       </div>
 
-      <!--request form-->
-      <div class="box">
-        <div class="form-group">
-          <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
-        </div>
-        <br>
-        <div class="requestChoice">
-          <a href="/requestSuccess"><button class="button" role="button"><strong>Request</strong></button></a>
-          <a href="/"><button class="cancel" role="button"><strong>Cancel</strong></button></a>
-        </div>
-      </div>
+      <footer>
+        <a href="#Home"><i class="fa-solid fa-house"></i></a>
+        <a href="#Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#Request"><i class="fa-solid fa-pen-to-square"></i></a>
+        <a href="#User"><i class="fa-solid fa-user"></i></a>
+      </footer>
     </div>
-
-    <footer>
-      <a href="#Home"><i class="fa-solid fa-house"></i></a>
-      <a href="#Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-      <a href="#Request"><i class="fa-solid fa-pen-to-square"></i></a>
-      <a href="#User"><i class="fa-solid fa-user"></i></a>
-    </footer>
-  </div>
 
 
 

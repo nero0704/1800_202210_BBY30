@@ -12,11 +12,11 @@ body {
   margin: 0;
 }
 
-.persInfo {
+#persInfo {
   color: white;
 }
 
-.tasteHome {
+#tasteHome {
   color: white;
 }
 
@@ -26,7 +26,7 @@ body {
   height: 100%;
 }
 
-.mainSelection {
+#mainSelection {
   float: left;
   margin-left: 47px;
   margin-bottom: 10px;
@@ -67,17 +67,14 @@ header a {
   grid-area: notification;
 }
 
-.form-control {
-  margin-right: 130px;
-}
-
 #main {
   height: 100vh;
   overflow-X: hidden;
   text-align: center;
+  background-color: #4A6572;
 }
 
-.col-lg-3 {
+#col-lg-3 {
   color: white;
 }
 
@@ -90,7 +87,7 @@ footer {
   position: sticky;
 }
 
-.requestChoice {
+#requestChoice {
   margin-right: 100px;
 }
 
@@ -107,21 +104,20 @@ footer a:active {
   font-size: 200%;
 }
 
-.box {
-  margin-left: 54px;
+#box {
   margin-top: 30px;
   width: 100%;
 }
 
-.form {
+#form {
   color: white;
 }
 
-.form-control {
+#form-control {
   width: 335px;
 }
 
-.button {
+#submit {
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -144,20 +140,20 @@ footer a:active {
   white-space: nowrap;
 }
 
-.button:hover {
+#submit:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.button:active {
+#submit:active {
   outline: 0;
 }
 
-.button:focus {
+#submit:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.cancel {
+#cancel {
   margin-left: 50px;
   align-items: center;
   background-color: initial;
@@ -181,7 +177,7 @@ footer a:active {
   white-space: nowrap;
 }
 
-.returnAccount {
+#returnAccount {
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#c25a4d, #ff2e09);
@@ -205,20 +201,20 @@ footer a:active {
   margin-top: 15px;
 }
 
-.returnAccount:hover {
+#returnAccount:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.returnAccount:active {
+#returnAccount:active {
   outline: 0;
 }
 
-.returnAccount:focus {
+#returnAccount:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.saveProfile {
+#saveProfile {
   float: right;
   margin-right: 89px;
   margin-top: 15px;
@@ -244,53 +240,53 @@ footer a:active {
   white-space: nowrap;
 }
 
-.saveProfile:hover {
+#saveProfile:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.saveProfile:active {
+#saveProfile:active {
   outline: 0;
 }
 
-.saveProfile:focus {
+#saveProfile:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.cancel:hover {
+#cancel:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.cancel:active {
+#cancel:active {
   outline: 0;
 }
 
-.cancel:focus {
+#cancel:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.cater {
+#cater {
   color: white;
 }
 
-.selection {
+#selection {
   margin-top: 50px;
   margin-right: 50px;
 }
 
-.success {
+#success {
   text-align: center;
   color: white;
 }
 
-.notify {
+#notify {
   font-size: 20px;
   text-align: center;
   color: white;
 }
 
-.return {
+#return {
   margin-top: 300px;
   margin-left: 50px;
   align-items: center;
@@ -315,20 +311,20 @@ footer a:active {
   white-space: nowrap;
 }
 
-.return:hover {
+#return:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.return:active {
+#return:active {
   outline: 0;
 }
 
-.return:focus {
+#return:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.request {
+#request {
   float: right;
   margin-top: 300px;
   margin-right: 50px;
@@ -354,31 +350,31 @@ footer a:active {
   white-space: nowrap;
 }
 
-.request:hover {
+#request:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-.request:active {
+#request:active {
   outline: 0;
 }
 
-.request:focus {
+#request:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-.account {
+#account {
   text-align: center;
   color: white;
 }
 
-.profileName {
+#profileName {
   font-size: 20px;
   text-align: center;
   color: white;
 }
 
-.edit {
+#edit {
   text-align: center;
   border: none;
   background: none;
@@ -386,7 +382,7 @@ footer a:active {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-.card {
+#card {
   width: 350px;
   height: 470px;
   background-color: #fff;
@@ -396,7 +392,7 @@ footer a:active {
   margin-left: 50px;
 }
 
-.card .info {
+#card .info {
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -404,7 +400,7 @@ footer a:active {
   background-color: #e5e5e5
 }
 
-.card .info button {
+#card .info button {
   height: 30px;
   width: 80px;
   border: none;
@@ -415,21 +411,21 @@ footer a:active {
   text-transform: uppercase
 }
 
-.card .forms {
+#card .forms {
   padding: 15px
 }
 
-.card .inputs {
+#card .inputs {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px
 }
 
-.card .inputs span {
+#card .inputs span {
   font-size: 12px
 }
 
-.card .inputs input {
+#card .inputs input {
   height: 40px;
   padding: 0px 10px;
   font-size: 17px;
