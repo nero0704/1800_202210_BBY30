@@ -26,6 +26,10 @@ body {
   height: 100%;
 }
 
+#title {
+  color: white;
+}
+
 #mainSelection {
   float: left;
   margin-left: 47px;
@@ -75,7 +79,7 @@ header a {
 }
 
 #col-lg-3 {
-  color: white;
+  color: white
 }
 
 footer {
@@ -109,8 +113,12 @@ footer a:active {
   color: white;
 }
 
-.form-control {
+#form-control {
   width: 335px;
+}
+
+#form-group {
+  color: white;
 }
 
 #submit {
@@ -388,7 +396,7 @@ footer a:active {
   margin-left: 50px;
 }
 
-#card .info {
+#card #info {
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -396,7 +404,7 @@ footer a:active {
   background-color: #e5e5e5
 }
 
-#card .info button {
+#card #info button {
   height: 30px;
   width: 80px;
   border: none;
@@ -407,21 +415,21 @@ footer a:active {
   text-transform: uppercase
 }
 
-#card .forms {
+#card #forms {
   padding: 15px
 }
 
-#card .inputs {
+#card #inputs {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px
 }
 
-#card .inputs span {
+#card #inputs span {
   font-size: 12px
 }
 
-#card .inputs input {
+#card #inputs input {
   height: 40px;
   padding: 0px 10px;
   font-size: 17px;
