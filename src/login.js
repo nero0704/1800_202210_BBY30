@@ -19,6 +19,41 @@ async function run() {
   const db = getFirestore();
   const auth = getAuth();
 
+  const input = document.querySelectorAll("input");
+  input.forEach((i) => {
+    if (window.location.pathname == "/login") {
+      i.addEventListener("input", disableLogin);
+    } else {
+      document.querySelector("button").disabled = true;
+      i.addEventListener("input", disableSignup);
+    }
+  })
+
+  // Disable Login & Signup buttons while input field is empty.
+  function disableSignup() {
+    if (document.getElementById("login-email").value &&
+      document.getElementById("login-password").value &&
+      document.getElementById("login-name").value &&
+      document.getElementById("login-username").value) {
+      document.querySelector("button").disabled = false;
+      console.log("Enabled.")
+    } else {
+      document.querySelector("button").disabled = true;
+      console.log("Disabled.")
+    }
+  }
+
+  function disableLogin() {
+    if (document.getElementById("login-email").value &&
+      document.getElementById("login-password").value) {
+      document.querySelector("button").disabled = false;
+      console.log("Enabled.")
+    } else {
+      document.querySelector("button").disabled = true;
+      console.log("Disabled.")
+    }
+  }
+
   // Toggles to show password when eye is clicked.
   window.showPassword = () => {
     let icon = document.getElementById("show-password").classList;
@@ -46,50 +81,17 @@ async function run() {
     return newObject;
   }
 
-  // Adds eventlistener to input fields.
-  const input = document.querySelectorAll("input");
-  input.forEach((i) => {
-    i.addEventListener('change', disableButton);
-  })
-
-  // Disable Login & Signup buttons while input field is empty.
-  function disableButton() {
-    if (window.location.pathname == "/signup") {
-      if (!(document.getElementById("login-email").value &&
-          document.getElementById("login-password").value &&
-          document.getElementById("login-name").value &&
-          document.getElementById("login-username").value)) {
-        document.querySelector("button").disabled = true;
-      } else {
-        document.querySelector("button").disabled = false;
-      }
-    } else if (window.location.pathname == "login") {
-      if (!(document.getElementById("login-name").value &&
-          document.getElementById("login-username").value)) {
-        document.querySelector("button").disabled = true;
-      } else {
-        document.querySelector("button").disabled = false;
-      }
-    }
-  }
-
-
   // Signup function called when Signup button is pressed.
   window.signup = () => {
-    let id = document.getElementById("login-email").value;
-    let pw = document.getElementById("login-password").value;
-    let name = document.getElementById("login-name").value;
-    let username = document.getElementById("login-username").value;
-
-    createUserWithEmailAndPassword(auth, id, pw)
+    createUserWithEmailAndPassword(auth, document.getElementById("login-email").value, document.getElementById("login-password").value)
       .then(async(userCredential) => {
         // Signed in
         const user = userCredential.user;
         console.log(user);
         await setDoc(doc(collection(db, "users"), user.uid), {
-          email: id,
-          name: name,
-          username: username
+          email: document.getElementById("login-email").value,
+          name: document.getElementById("login-name").value,
+          username: document.getElementById("login-username").value
         })
         console.log("Successfully Signed up.");
         localStorage.setItem('new', 'true');
@@ -103,12 +105,11 @@ async function run() {
 
   // Login function called when Login button is pressed.
   window.login = () => {
-    let id = document.getElementById("login-email").value;
-    let pw = document.getElementById("login-password").value;
-    signInWithEmailAndPassword(auth, id, pw)
+    signInWithEmailAndPassword(auth, document.getElementById("login-email").value, document.getElementById("login-password").value)
       .then((userCredential) => {
         console.log("Successfully Logged in.");
         const user = userCredential.user;
+        console.log(user);
         location.href = "/";
       })
       .catch((error) => {

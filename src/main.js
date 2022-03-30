@@ -19,4 +19,4 @@ async function run() {
     console.log("New is true");
     overlay(db, user.uid);
   }
-};
+}
