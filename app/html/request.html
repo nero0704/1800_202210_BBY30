@@ -45,15 +45,15 @@
     <div id="main">
       <!-- creates dropdown of catergories -->
       <h1 id="form">Request Form</h1>
-      <div id="form-group">
+      <div class="form-group">
         <label id="title">Title</label>
         <div id="col-lg-8">
-          <input id="form-control" type="text" value="Enter title of post">
+          <input id="title-text" class="form-control" type="text" placeholder="Enter title of post">
         </div>
         <div id="mainSelection">
           <div id="selection">
             <label id="cater" for="catergory"><strong>Catergory:</strong></label>
-            <select name="snacks" required>
+            <select id="select" name="snacks" required>
           <option value="" disabled selected hidden>Select Catergory</option>
           <option value="Candy">Candy</option>
           <option value="choc">Chocolate</option>
@@ -66,8 +66,8 @@
 
         <!--request form-->
         <div id="box">
-          <div id="form-group">
-            <textarea id="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
+          <div class="form-group">
+            <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="12"></textarea>
           </div>
           <br>
           <div id="requestChoice">
@@ -76,19 +76,14 @@
           </div>
         </div>
       </div>
-
-      <footer>
-        <a href="#Home"><i class="fa-solid fa-house"></i></a>
-        <a href="#Search"><i class="fa-solid fa-magnifying-glass"></i></a>
-        <a href="#Request"><i class="fa-solid fa-pen-to-square"></i></a>
-        <a href="#User"><i class="fa-solid fa-user"></i></a>
-      </footer>
     </div>
 
+    <footer id="footer-nav">
+    </footer>
+  </div>
 
 
-
-
+  <script src="/js/dist/request.bundle.js"></script>
 </body>
 
 </html>

@@ -5,7 +5,8 @@ module.exports = {
   entry: {
     login: './src/login.js',
     main: './src/main.js',
-    search: './src/search.js'
+    search: './src/search.js',
+    request: './src/request.js'
   },
   // The location of the build folder described above
   output: {
