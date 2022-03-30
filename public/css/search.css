@@ -140,4 +140,23 @@
     background: rgb(70, 68, 68);
     transform: rotate(315deg);
   }
+  footer {
+    display: grid;
+    background-color: grey;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 8vh;
+    bottom: 0;
+    position: sticky;
+  }
+  footer a {
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    font-size: 150%;
+    align-items: center;
+    color: white;
+  }
+  footer a:active {
+    font-size: 200%;
+  }
 }
