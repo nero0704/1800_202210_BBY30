@@ -4,7 +4,7 @@ import { getFirestore } from "firebase/firestore";
 
 var app, auth, db, uid;
 
-function init(type) {
+function init() {
   const firebaseConfig = {
     apiKey: "AIzaSyBzVgKTLtYr-EncsGWaW1a1qbx1esxkQ14",
     authDomain: "taste-of-home-1dedd.firebaseapp.com",
@@ -16,25 +16,15 @@ function init(type) {
   app = initializeApp(firebaseConfig);
   auth = getAuth();
   db = getFirestore(app);
-
   onAuthStateChanged(auth, (user) => {
     if (user) {
       uid = user.uid;
-      console.log(uid);
+      // console.log(uid);
       console.log("Initialized.");
     } else {
       window.location.href("/login");
     }
   });
-
-  // switch (type) {
-  //   case "db":
-  //     return db;
-  //   case "uid":
-  //     return uid;
-  //   case "auth":
-  //     return auth;
-  // }
 }
 
 function DB() {
