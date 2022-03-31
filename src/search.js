@@ -27,35 +27,52 @@ async function run() {
     })
   const db = getFirestore();
 
-  createCards(searchBar);
+  let data = []
+  let snacks = []
+  parse(searchBar);
 
-  async function createCards(callback) {
+  async function parse(callback) {
+
     const querySnapshot = await getDocs(collection(db, "snacks"));
-    let snacks = []
+    const userCardTemplate = document.querySelector("[data-user-template]");
+    const cardContainer = document.querySelector("[user-cards]");
+
     querySnapshot.forEach((doc) => {
-      snacks.push(({
+      data.push({
         name: doc.id,
         type: doc.data().type,
         country: doc.data().country
-      }));
-    });
-    console.log(snacks);
-
-    const userCardTemplate = document.querySelector("[data-user-template]")
-
+      });
+    })
+    snacks = data.map(snack => {
+      const card = userCardTemplate.content.cloneNode(true).children[0]
+      const name = card.querySelector("[data-name]")
+      const type = card.querySelector("[data-snack]")
+      const country = card.querySelector("[data-country]")
+      name.textContent = snack.name
+      type.textContent = snack.type
+      country.textContent = snack.country
+      cardContainer.append(card);
+      return { name: snack.name, type: snack.type, country: snack.country, element: card }
+    })
+    console.log(snacks)
     callback();
   };
+
+
+
 
   function searchBar() {
     console.log("Create cards");
     const searchInput = document.getElementById("mysearch");
     searchInput.addEventListener("input", (e) => {
-      const value = e.target.value
-      console.log(value);
+      const value = e.target.value.toLowerCase()
+      console.log(value)
       snacks.forEach(snack => {
         const isVisible =
-          snack.name.includes(value) || snack.country.includes(value) ||
-          snack.type.includes(value)
+          snack.name.toLowerCase().includes(value) ||
+          snack.country.toLowerCase().includes(value) ||
+          snack.type.toLowerCase().includes(value)
         snack.element.classList.toggle("hide", !isVisible)
       })
     });
