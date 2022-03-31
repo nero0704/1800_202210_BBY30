@@ -12,25 +12,21 @@ body {
   margin: 0;
 }
 
-#persInfo {
+.persInfo {
   color: white;
 }
 
-#tasteHome {
+.tasteHome {
   color: white;
 }
 
 #general-container {
-  background-color: #FFFFFF;
+  background-color: #4A6572;
   display: grid;
   height: 100%;
 }
 
-#title {
-  color: #800020;
-}
-
-#mainSelection {
+.mainSelection {
   float: left;
   margin-left: 47px;
   margin-bottom: 10px;
@@ -38,7 +34,7 @@ body {
 
 header {
   display: grid;
-  background-color: #800020;
+  background-color: grey;
   grid-template-columns: auto auto 10% 10%;
   grid-template-rows: 8vh;
   grid-template-areas: "logo . hamburger notification ";
@@ -73,22 +69,25 @@ header a {
 
 #main {
   height: 100vh;
-  overflow-X: hidden;
+  overflow-y: hidden;
   text-align: center;
-  background-color: #FFFFFF;
 }
 
-#col-lg-3 {
-  color: white
+.col-lg-3 {
+  color: white;
 }
 
 footer {
   display: grid;
-  background-color: #800020;
+  background-color: grey;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8vh;
   bottom: 0;
   position: sticky;
+}
+
+.requestChoice {
+  margin-right: 50px;
 }
 
 footer a {
@@ -104,24 +103,23 @@ footer a:active {
   font-size: 200%;
 }
 
-#box {
+.box {
+  margin-left: 54px;
   margin-top: 30px;
   width: 100%;
 }
 
-#form {
-  color: #800020;
+.form {
+  margin-left: 125px;
+  color: white;
 }
 
-#form-control {
+.form-control {
   width: 335px;
 }
 
-#form-group {
-  color: white;
-}
-
-#submit {
+.button {
+  float: right;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -144,20 +142,21 @@ footer a:active {
   white-space: nowrap;
 }
 
-#submit:hover {
+.button:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#submit:active {
+.button:active {
   outline: 0;
 }
 
-#submit:focus {
+.button:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#cancel {
+.cancel {
+  float: left;
   margin-left: 50px;
   align-items: center;
   background-color: initial;
@@ -181,7 +180,7 @@ footer a:active {
   white-space: nowrap;
 }
 
-#returnAccount {
+.returnAccount {
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#c25a4d, #ff2e09);
@@ -205,23 +204,22 @@ footer a:active {
   margin-top: 15px;
 }
 
-#returnAccount:hover {
+.returnAccount:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#returnAccount:active {
+.returnAccount:active {
   outline: 0;
 }
 
-#returnAccount:focus {
+.returnAccount:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#saveProfile {
+.saveProfile {
   float: right;
-  margin-right: 89px;
-  margin-top: 15px;
+  margin-right: 110px;
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -244,53 +242,53 @@ footer a:active {
   white-space: nowrap;
 }
 
-#saveProfile:hover {
+.saveProfile:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#saveProfile:active {
+.saveProfile:active {
   outline: 0;
 }
 
-#saveProfile:focus {
+.saveProfile:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#cancel:hover {
+.cancel:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#cancel:active {
+.cancel:active {
   outline: 0;
 }
 
-#cancel:focus {
+.cancel:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#cater {
+.cater {
   color: white;
 }
 
-#selection {
+.selection {
   margin-top: 50px;
-  margin-right: 50px;
+  margin-left: 55px;
 }
 
-#success {
+.success {
   text-align: center;
   color: white;
 }
 
-#notify {
+.notify {
   font-size: 20px;
   text-align: center;
   color: white;
 }
 
-#return {
+.return {
   margin-top: 300px;
   margin-left: 50px;
   align-items: center;
@@ -315,20 +313,20 @@ footer a:active {
   white-space: nowrap;
 }
 
-#return:hover {
+.return:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#return:active {
+.return:active {
   outline: 0;
 }
 
-#return:focus {
+.return:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#request {
+.request {
   float: right;
   margin-top: 300px;
   margin-right: 50px;
@@ -354,39 +352,39 @@ footer a:active {
   white-space: nowrap;
 }
 
-#request:hover {
+.request:hover {
   box-shadow: rgba(0, 1, 0, .2) 0 2px 8px;
   opacity: .85;
 }
 
-#request:active {
+.request:active {
   outline: 0;
 }
 
-#request:focus {
+.request:focus {
   box-shadow: rgba(0, 0, 0, .5) 0 0 0 3px;
 }
 
-#account {
+.account {
   text-align: center;
   color: white;
 }
 
-#profileName {
+.profileName {
   font-size: 20px;
   text-align: center;
   color: white;
 }
 
-#edit {
+.edit {
   text-align: center;
   border: none;
   background: none;
-  color: white;
+  color: rgb(2, 238, 61);
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-#card {
+.card {
   width: 350px;
   height: 470px;
   background-color: #fff;
@@ -396,7 +394,7 @@ footer a:active {
   margin-left: 50px;
 }
 
-#card #info {
+.card .info {
   padding: 15px;
   display: flex;
   justify-content: space-between;
@@ -404,7 +402,7 @@ footer a:active {
   background-color: #e5e5e5
 }
 
-#card #info button {
+.card .info button {
   height: 30px;
   width: 80px;
   border: none;
@@ -415,24 +413,28 @@ footer a:active {
   text-transform: uppercase
 }
 
-#card #forms {
+.card .forms {
   padding: 15px
 }
 
-#card #inputs {
+.card .inputs {
   display: flex;
   flex-direction: column;
   margin-bottom: 10px
 }
 
-#card #inputs span {
+.card .inputs span {
   font-size: 12px
 }
 
-#card #inputs input {
+.card .inputs input {
   height: 40px;
   padding: 0px 10px;
   font-size: 17px;
   box-shadow: none;
   outline: none
+}
+
+.card .inputs input[type="text"][readonly] {
+  border: 2px solid rgba(0, 0, 0, 0)
 }

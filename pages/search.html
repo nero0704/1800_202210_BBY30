@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta nam e="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="/styles/search.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="images/favicons" href="images/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="images/favicons" href="images/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="images/favicons" href="/favicon-96x96.png" sizes="96x96">
+
+  <!-- Authentication javascript-->
+  <script src="./scripts/authentication.js"></script>
+  <script src="../scripts/search.js"></script>
+
+  <!-- fire base link-->
+  <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+  <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+
+  <title>Taste Of Home</title>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div id="general-container">
+
+    <div id="main">
+      <div class="search-container">
+        <div class="search">
+          <div class="icon"></div>
+          <div class="input">
+            <input type="text" placeholder="Search" id="mysearch" data-search>
+          </div>
+          <span class="clear" onclick="document.getElementById
+        ('mysearch').value = ''"></span>
+        </div>
+      </div>
+
+      <h2 id="categories">Popular categories</h2>
+
+      <div class="card-container">
+        <div class="card">
+          <img src="../images/searchImages/chocolate.jpg" class="searchImage">
+          <div class="info">Chocolate</div>
+        </div>
+        <div class="card">
+          <img src="../images/searchImages/candy.jpg" class="searchImage">
+          <div class="info">Candy</div>
+        </div>
+        <div class="card">
+          <img src="../images/searchImages/beverage.jpg" class="searchImage">
+          <div class="info">Beverage</div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <footer>
+      <a href="#Home"><i class="fa-solid fa-house"></i></a>
+      <a href="#Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+      <a href="#Request"><i class="fa-solid fa-pen-to-square"></i></a>
+      <a href="#User"><i class="fa-solid fa-user"></i></a>
+    </footer>
+
+  </div>
+
+
+  <script>
+    const icon = document.querySelector('.icon');
+    const search = document.querySelector('.search');
+    icon.onclick = function() {
+
+    }
+  </script>
+
+</body>
+
+</html>
