@@ -40,6 +40,9 @@
     transform: scale(1.03);
     transition: all 1s ease;
   }
+  .hide {
+    display: none;
+  }
   .search-container {
     display: flex;
     justify-content: center;
