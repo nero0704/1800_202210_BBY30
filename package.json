@@ -19,7 +19,7 @@
   "homepage": "https://github.com/nero0704/1800_202210_BBY30#readme",
   "dependencies": {
     "express": "^4.17.3",
-    "firebase": "^9.6.8",
+    "firebase": "^9.6.10",
     "firebaseui": "^6.0.1"
   },
   "devDependencies": {
