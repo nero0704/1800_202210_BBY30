@@ -12,7 +12,7 @@ module.exports = {
   },
   // The location of the build folder described above
   output: {
-    path: path.resolve(__dirname + "/../../public/js/", "dist"),
+    path: path.resolve(__dirname + "/public/js/dist"),
     filename: "[name].bundle.js",
   },
   // Optional and for development only. This provides the ability to

@@ -1,5 +1,5 @@
 import { init } from './firebaseInit.js';
-import { ready, client, ajaxGET } from './client.js';
+import { ready, client } from './client.js';
 import {
   createUserWithEmailAndPassword,
   getAuth,
@@ -95,7 +95,7 @@ async function run() {
         })
         console.log("Successfully Signed up.");
         localStorage.setItem('new', 'true');
-        ajaxGET("/", () => {})
+        window.location.href = "/app";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -110,7 +110,7 @@ async function run() {
         console.log("Successfully Logged in.");
         const user = userCredential.user;
         console.log(user);
-        ajaxGET("/", () => {})
+        window.location.href = "/app";
       })
       .catch((error) => {
         const errorCode = error.code;

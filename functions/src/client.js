@@ -11,7 +11,7 @@ function ready(callback) {
 function client() {
   console.log("Client script loaded.");
 
-  ajaxGET("/nav", (data) => {
+  ajaxGET("/app/nav", (data) => {
     try {
       document.getElementById("footer-nav").innerHTML = data;
     } catch (error) {

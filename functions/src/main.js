@@ -1,5 +1,5 @@
 import { init } from './firebaseInit.js';
-import { ready, client, ajaxGET } from './client.js';
+import { ready, client } from './client.js';
 import { overlay } from './main-overlay.js';
 import { getFirestore } from 'firebase/firestore';
 
@@ -11,7 +11,7 @@ async function run() {
   const user = await init()
     .catch((error) => {
       console.log(error)
-      ajaxGET("/login", () => {})
+      window.location.href = "/app/login";
     })
   const db = getFirestore();
 

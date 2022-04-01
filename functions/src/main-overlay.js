@@ -6,7 +6,7 @@ function overlay(db, uid) {
   let countries;
   let snacks;
 
-  ajaxGET("/new?format=countries", (data) => {
+  ajaxGET("/app/new?format=countries", (data) => {
 
     document.getElementById("overlay").innerHTML = data;
     document.getElementById("overlay").style.display = "grid";
@@ -22,7 +22,7 @@ function overlay(db, uid) {
     });
 
     document.getElementById("next").addEventListener("click", async() => {
-      ajaxGET("/new?format=snacks", (data) => {
+      ajaxGET("/app/new?format=snacks", (data) => {
 
         countries = document.getElementById("tags-container").getElementsByClassName("active");
         document.getElementById("overlay").innerHTML = data;
