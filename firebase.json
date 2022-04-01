@@ -7,7 +7,7 @@
     "indexes": "firestore.indexes.json"
   },
   "hosting": {
-    "public": "public",
+    "public": "functions/public",
     "rewrites": [{
       "source": "/app",
       "function": "app"
@@ -20,10 +20,5 @@
   },
   "storage": {
     "rules": "storage.rules"
-  },
-  "emulators": {
-    "functions": {
-      "port": 7000
-    }
   }
 }
