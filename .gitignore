@@ -1,7 +1,1 @@
-.DS_Store
-*.logs
 node_modules/
-public/js/dist/bundle.js
-firestore-debug.log
-functions/firebase-debug.log
-functions/firestore-debug.log

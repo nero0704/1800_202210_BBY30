@@ -10,7 +10,7 @@ async function run() {
   const user = await init()
     .catch((error) => {
       console.log(error)
-      window.location.href = "/app/login";
+      window.location.href = "/login";
     })
   const db = getFirestore();
 
@@ -25,7 +25,7 @@ async function run() {
         type: cater
       })
       .then(() => {
-        window.location.href = "/app/requestSuccesful";
+        window.location.href = "/requestSuccesful";
       }).catch((error) => {
         console.log(error);
       })

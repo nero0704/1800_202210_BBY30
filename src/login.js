@@ -21,7 +21,7 @@ async function run() {
 
   const input = document.querySelectorAll("input");
   input.forEach((i) => {
-    if (window.location.pathname == "/app/login") {
+    if (window.location.pathname == "/login") {
       i.addEventListener("input", disableLogin);
     } else {
       document.querySelector("button").disabled = true;
@@ -95,7 +95,7 @@ async function run() {
         })
         console.log("Successfully Signed up.");
         localStorage.setItem('new', 'true');
-        window.location.href = "/app";
+        window.location.href = "/";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -110,7 +110,7 @@ async function run() {
         console.log("Successfully Logged in.");
         const user = userCredential.user;
         console.log(user);
-        window.location.href = "/app";
+        window.location.href = "/";
       })
       .catch((error) => {
         const errorCode = error.code;
