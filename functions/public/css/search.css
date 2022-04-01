@@ -2,6 +2,7 @@
   body {
     background-color: #272727;
     font-family: sans-serif;
+    margin: 0;
   }
   p {
     color: #fff;
@@ -16,6 +17,9 @@
   }
   input {
     font-size: 1rem;
+  }
+  .container {
+    min-height: 92vh;
   }
   .user-cards {
     display: grid;

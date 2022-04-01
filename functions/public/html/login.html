@@ -13,13 +13,13 @@
   <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
 
   <!-- Style -->
-  <link rel="stylesheet" href="/css/login.css">
+  <link rel="stylesheet" href="https://storage.cloud.google.com/taste-of-home/public/css/login.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Favicons -->
-  <link rel="icon" type="images/favicons" href="/img/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="images/favicons" href="https://storage.cloud.google.com/taste-of-home/public/img/favicons/favicon-32x32.png" sizes="32x32">
 
   <!-- Title -->
   <title>Taste Of Home</title>
@@ -32,34 +32,29 @@
 
 
 
-
-
   <div id="general-container">
     <header>
       <p><strong>Taste</strong> <small>of</small> <strong>Home</strong></p>
     </header>
 
-    <div id="main" class="signup">
-      <input type="email" id="login-email" placeholder="Email">
-      <input type="text" id="login-name" placeholder="Full Name">
-      <input type="text" id="login-username" placeholder="UserName">
+    <div id="main" class="login">
+      <input type="email" id="login-email" placeholder="Email" autocomplete="off">
       <div id="password">
-        <input type="password" id="login-password" placeholder="Password">
+        <input type="password" id="login-password" placeholder="Password" autocomplete="off">
         <i class="fa-solid fa-eye" id="show-password" onclick="window.showPassword()"></i>
       </div>
+      <button type="button" onclick="window.login()">login</button>
 
-      <button type="button" onclick="window.signup()">Sign up</button>
-
-      <p>Have an account? <a href="/login">Log in</a></p>
+      <p>Forgot your password? <a href="#help">Get help signing in.</a></p>
+      <p><strong>OR</strong></p>
+      <p>Don't have an account? <a href="/signup">Sign up</a></p>
     </div>
   </div>
 
 
 
-
-
   <!-- Authentication javascript-->
-  <script src="/js/dist/login.bundle.js"></script>
+  <script src="https://storage.cloud.google.com/taste-of-home/public/js/dist/login.bundle.js"></script>
 
 </body>
 

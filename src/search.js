@@ -1,5 +1,5 @@
 import { init } from './firebaseInit.js';
-import { ready, client } from './client.js';
+import { ready, client, ajaxGET } from './client.js';
 import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
 
 
@@ -23,7 +23,7 @@ async function run() {
   const user = await init()
     .catch((error) => {
       console.log(error)
-      window.location.href = "/login";
+      ajaxGET("/login", () => {})
     })
   const db = getFirestore();
 
@@ -41,7 +41,8 @@ async function run() {
       data.push({
         name: doc.id,
         type: doc.data().type,
-        country: doc.data().country
+        country: doc.data().country,
+        img: doc.data().img
       });
     })
     snacks = data.map(snack => {
@@ -49,6 +50,7 @@ async function run() {
       const name = card.querySelector("[data-name]")
       const type = card.querySelector("[data-snack]")
       const country = card.querySelector("[data-country]")
+      const img = card.querySelector("[data-country]")
       name.textContent = snack.name
       type.textContent = snack.type
       country.textContent = snack.country
@@ -57,7 +59,7 @@ async function run() {
     })
     console.log(snacks)
     callback();
-  };
+  }
 
 
 

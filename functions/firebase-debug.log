@@ -1,0 +1,129 @@
+[debug] [2022-03-31T23:20:23.716Z] ----------------------------------------------------------------------
+[debug] [2022-03-31T23:20:23.717Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\LGG4d\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start --only functions
+[debug] [2022-03-31T23:20:23.718Z] CLI Version:   10.5.0
+[debug] [2022-03-31T23:20:23.718Z] Platform:      win32
+[debug] [2022-03-31T23:20:23.718Z] Node Version:  v16.14.0
+[debug] [2022-03-31T23:20:23.719Z] Time:          Thu Mar 31 2022 16:20:23 GMT-0700 (미 태평양 하계 표준시)
+[debug] [2022-03-31T23:20:23.719Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-03-31T23:20:23.782Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-03-31T23:20:23.782Z] > authorizing via signed-in user (lgg4david@gmail.com)
+[info] i  emulators: Starting emulators: functions {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: functions"}}
+[debug] [2022-03-31T23:20:23.810Z] [hub] writing locator at C:\Users\LGG4d\AppData\Local\Temp\hub-taste-of-home-1dedd.json
+[warn] !  functions: The following emulators are not running, calls to these services from the Functions emulator will affect production: auth, firestore, database, hosting, pubsub, storage {"metadata":{"emulator":{"name":"functions"},"message":"The following emulators are not running, calls to these services from the Functions emulator will affect production: \u001b[1mauth, firestore, database, hosting, pubsub, storage\u001b[22m"}}
+[info] +  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-03-31T23:20:23.830Z] defaultcredentials: writing to file C:\Users\LGG4d\AppData\Roaming\firebase\lgg4david_gmail_com_application_default_credentials.json
+[debug] [2022-03-31T23:20:23.832Z] Setting GAC to C:\Users\LGG4d\AppData\Roaming\firebase\lgg4david_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to C:\\Users\\LGG4d\\AppData\\Roaming\\firebase\\lgg4david_gmail_com_application_default_credentials.json"}}
+[debug] [2022-03-31T23:20:23.834Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/taste-of-home-1dedd/adminSdkConfig [none]
+[debug] [2022-03-31T23:20:24.052Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/taste-of-home-1dedd/adminSdkConfig 200
+[debug] [2022-03-31T23:20:24.052Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/taste-of-home-1dedd/adminSdkConfig {"projectId":"taste-of-home-1dedd","storageBucket":"taste-of-home-1dedd.appspot.com","locationId":"us-central"}
+[debug] [2022-03-31T23:20:24.084Z] Ignoring unsupported arg: auto_download {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: auto_download"}}
+[debug] [2022-03-31T23:20:24.084Z] Ignoring unsupported arg: port {"metadata":{"emulator":{"name":"ui"},"message":"Ignoring unsupported arg: port"}}
+[debug] [2022-03-31T23:20:24.084Z] Starting Emulator UI with command {"binary":"node","args":["C:\\Users\\LGG4d\\.cache\\firebase\\emulators\\ui-v1.6.5\\server.bundle.js"],"optionalArgs":[],"joinArgs":false} {"metadata":{"emulator":{"name":"ui"},"message":"Starting Emulator UI with command {\"binary\":\"node\",\"args\":[\"C:\\\\Users\\\\LGG4d\\\\.cache\\\\firebase\\\\emulators\\\\ui-v1.6.5\\\\server.bundle.js\"],\"optionalArgs\":[],\"joinArgs\":false}"}}
+[info] i  ui: Emulator UI logging to ui-debug.log {"metadata":{"emulator":{"name":"ui"},"message":"Emulator UI logging to \u001b[1mui-debug.log\u001b[22m"}}
+[debug] [2022-03-31T23:20:24.212Z] Web / API server started at localhost:4000
+ {"metadata":{"emulator":{"name":"ui"},"message":"Web / API server started at localhost:4000\n"}}
+[info] i  functions: Watching "D:\COMP 1800\1800_202210_BBY30\functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"D:\\COMP 1800\\1800_202210_BBY30\\functions\" for Cloud Functions..."}}
+[debug] [2022-03-31T23:20:24.373Z] Validating nodejs source
+[debug] [2022-03-31T23:20:26.735Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.17.3",
+    "firebase": "^9.6.10",
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0",
+    "webpack": "^5.70.0",
+    "webpack-cli": "^4.9.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-03-31T23:20:26.735Z] Building nodejs source
+[debug] [2022-03-31T23:20:26.735Z] Analyzing nodejs backend spec
+[info] +  functions[us-central1-app]: http function initialized (http://localhost:5001/taste-of-home-1dedd/us-central1/app). {"metadata":{"emulator":{"name":"functions"},"message":"\u001b[1mhttp\u001b[22m function initialized (http://localhost:5001/taste-of-home-1dedd/us-central1/app)."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+│ i  View Emulator UI at http://localhost:4000                │
+└─────────────────────────────────────────────────────────────┘
+
+┌───────────┬────────────────┬─────────────────────────────────┐
+│ Emulator  │ Host:Port      │ View in Emulator UI             │
+├───────────┼────────────────┼─────────────────────────────────┤
+│ Functions │ localhost:5001 │ http://localhost:4000/functions │
+└───────────┴────────────────┴─────────────────────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-03-31T23:20:31.265Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-31T23:20:31.266Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-31T23:20:31.266Z] Accepted request GET /taste-of-home-1dedd/us-central1/app --> us-central1-app
+[debug] [2022-03-31T23:20:31.274Z] [worker-pool] addWorker(us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] addWorker(us-central1-app)"}}
+[debug] [2022-03-31T23:20:31.274Z] [worker-pool] Adding worker with key us-central1-app, total=1 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] Adding worker with key us-central1-app, total=1"}}
+[debug] [2022-03-31T23:20:31.275Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-03-31T23:20:31.275Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: Assigning socketPath: \\?\pipe\D:\COMP 1800\1800_202210_BBY30\functions\22132 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: Assigning socketPath: \\\\?\\pipe\\D:\\COMP 1800\\1800_202210_BBY30\\functions\\22132"}}
+[debug] [2022-03-31T23:20:31.275Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: BUSY"}}
+[debug] [2022-03-31T23:20:32.978Z] [runtime-status] [22132] Functions runtime initialized. {"cwd":"D:\\COMP 1800\\1800_202210_BBY30\\functions","node_version":"16.14.0"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Functions runtime initialized. {\"cwd\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\",\"node_version\":\"16.14.0\"}"}}
+[debug] [2022-03-31T23:20:32.979Z] [runtime-status] [22132] Disabled runtime features: undefined {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Disabled runtime features: undefined"}}
+[debug] [2022-03-31T23:20:32.981Z] [runtime-status] [22132] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:32.982Z] [runtime-status] [22132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:32.983Z] [runtime-status] [22132] Outgoing network have been stubbed. [{"name":"http","status":"mocked"},{"name":"http","status":"mocked"},{"name":"https","status":"mocked"},{"name":"https","status":"mocked"},{"name":"net","status":"mocked"}] {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Outgoing network have been stubbed. [{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"http\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"https\",\"status\":\"mocked\"},{\"name\":\"net\",\"status\":\"mocked\"}]"}}
+[debug] [2022-03-31T23:20:32.983Z] [runtime-status] [22132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:33.020Z] [runtime-status] [22132] Checked functions.config() {"config":{}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Checked functions.config() {\"config\":{}}"}}
+[debug] [2022-03-31T23:20:33.021Z] [runtime-status] [22132] firebase-functions has been stubbed. {"functionsResolution":{"declared":true,"installed":true,"version":"3.19.0","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-functions\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] firebase-functions has been stubbed. {\"functionsResolution\":{\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-31T23:20:33.021Z] [runtime-status] [22132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:33.023Z] [runtime-status] [22132] Resolved module firebase-admin {"declared":true,"installed":true,"version":"10.0.2","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-admin\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-admin {\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:33.024Z] [runtime-status] [22132] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.19.0","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-functions\\lib\\index.js"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Resolved module firebase-functions {\"declared\":true,\"installed\":true,\"version\":\"3.19.0\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-functions\\\\lib\\\\index.js\"}"}}
+[debug] [2022-03-31T23:20:33.024Z] [runtime-status] [22132] firebase-admin has been stubbed. {"adminResolution":{"declared":true,"installed":true,"version":"10.0.2","resolution":"D:\\COMP 1800\\1800_202210_BBY30\\functions\\node_modules\\firebase-admin\\lib\\index.js"}} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] firebase-admin has been stubbed. {\"adminResolution\":{\"declared\":true,\"installed\":true,\"version\":\"10.0.2\",\"resolution\":\"D:\\\\COMP 1800\\\\1800_202210_BBY30\\\\functions\\\\node_modules\\\\firebase-admin\\\\lib\\\\index.js\"}}"}}
+[debug] [2022-03-31T23:20:33.110Z] [runtime-status] [22132] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-03-31T23:20:33.113Z] [runtime-status] [22132] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Running app in signature http"}}
+[debug] [2022-03-31T23:20:33.114Z] [runtime-status] [22132] Attempting to listen to socketPath: \\?\pipe\D:\COMP 1800\1800_202210_BBY30\functions\22132 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Attempting to listen to socketPath: \\\\?\\pipe\\D:\\COMP 1800\\1800_202210_BBY30\\functions\\22132"}}
+[debug] [2022-03-31T23:20:33.121Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-31T23:20:33.122Z] [functions] Got req.url=/taste-of-home-1dedd/us-central1/app, mapping to path=/ {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/taste-of-home-1dedd/us-central1/app, mapping to path=/"}}
+[debug] [2022-03-31T23:20:33.128Z] [runtime-status] [22132] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Ephemeral server handling GET request"}}
+[debug] [2022-03-31T23:20:33.136Z] [runtime-status] [22132] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-03-31T23:20:33.146Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: IDLE"}}
+[debug] [2022-03-31T23:20:33.146Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-31T23:20:33.848Z] Functions emulator received unknown request at path /nav
+[debug] [2022-03-31T23:20:33.868Z] Functions emulator received unknown request at path /login
+[debug] [2022-03-31T23:20:33.913Z] Functions emulator received unknown request at path /favicon.ico
+[debug] [2022-03-31T23:20:41.486Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2022-03-31T23:20:41.487Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2022-03-31T23:20:41.487Z] Accepted request GET /taste-of-home-1dedd/us-central1/app/login --> us-central1-app
+[debug] [2022-03-31T23:20:41.488Z] [worker-pool] submitWork(triggerId=us-central1-app) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=us-central1-app)"}}
+[debug] [2022-03-31T23:20:41.488Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: Assigning socketPath: \\?\pipe\D:\COMP 1800\1800_202210_BBY30\functions\22132 {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: Assigning socketPath: \\\\?\\pipe\\D:\\COMP 1800\\1800_202210_BBY30\\functions\\22132"}}
+[debug] [2022-03-31T23:20:41.489Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: BUSY"}}
+[debug] [2022-03-31T23:20:41.490Z] [runtime-status] [22132] Beginning invocation function app! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Beginning invocation function app!"}}
+[info] i  functions: Beginning execution of "app" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Beginning execution of \"app\""}}
+[debug] [2022-03-31T23:20:41.491Z] [runtime-status] [22132] Running app in signature http {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Running app in signature http"}}
+[debug] [2022-03-31T23:20:41.493Z] [runtime-status] [22132] Attempting to listen to socketPath: \\?\pipe\D:\COMP 1800\1800_202210_BBY30\functions\22132 {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Attempting to listen to socketPath: \\\\?\\pipe\\D:\\COMP 1800\\1800_202210_BBY30\\functions\\22132"}}
+[debug] [2022-03-31T23:20:41.497Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2022-03-31T23:20:41.498Z] [functions] Got req.url=/taste-of-home-1dedd/us-central1/app/login, mapping to path=/login {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Got req.url=/taste-of-home-1dedd/us-central1/app/login, mapping to path=/login"}}
+[debug] [2022-03-31T23:20:41.502Z] [runtime-status] [22132] Ephemeral server handling GET request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Ephemeral server handling GET request"}}
+[debug] [2022-03-31T23:20:41.506Z] [runtime-status] [22132] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"[runtime-status] [22132] Ephemeral server survived."}}
+[info] i  functions: Finished "app" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"us-central1-app"},"extension":{},"message":"Finished \"app\" in ~1s"}}
+[debug] [2022-03-31T23:20:41.509Z] [worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-us-central1-app-0ebe2c88-1e63-4409-90b2-02fa4cbdf286]: IDLE"}}
+[debug] [2022-03-31T23:20:41.509Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2022-03-31T23:20:42.070Z] Functions emulator received unknown request at path /nav

@@ -1,5 +1,5 @@
 import { init } from './firebaseInit.js';
-import { ready, client } from './client.js';
+import { ready, client, ajaxGET } from './client.js';
 import { doc, setDoc, collection, getFirestore, getDoc } from 'firebase/firestore';
 
 run();
@@ -10,7 +10,7 @@ async function run() {
   const user = await init()
     .catch((error) => {
       console.log(error)
-      window.location.href = "/login";
+      ajaxGET("/login", () => {})
     })
   const db = getFirestore();
 
@@ -25,7 +25,7 @@ async function run() {
         type: cater
       })
       .then(() => {
-        window.location.href = "/requestSuccess"
+        ajaxGET("/requestSuccess", () => {})
       }).catch((error) => {
         console.log(error);
       })
