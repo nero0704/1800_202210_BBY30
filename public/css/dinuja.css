@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   src: url();
 }
 
@@ -113,7 +113,7 @@ footer a:active {
   color: #800020;
 }
 
-#form-control {
+.form-control {
   width: 335px;
 }
 
@@ -271,7 +271,7 @@ footer a:active {
 }
 
 #cater {
-  color: white;
+  color: #800020;
 }
 
 #selection {
@@ -281,13 +281,13 @@ footer a:active {
 
 #success {
   text-align: center;
-  color: white;
+  color: #800020;
 }
 
 #notify {
   font-size: 20px;
   text-align: center;
-  color: white;
+  color: #800020;
 }
 
 #return {
@@ -369,20 +369,21 @@ footer a:active {
 
 #account {
   text-align: center;
-  color: white;
+  color: #800020;
 }
 
 #profileName {
   font-size: 20px;
   text-align: center;
-  color: white;
+  color: #800020;
 }
 
 #edit {
+  background-color: transparent;
+  border: 0;
+  line-height: 1;
   text-align: center;
-  border: none;
-  background: none;
-  color: white;
+  color: #800020;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
