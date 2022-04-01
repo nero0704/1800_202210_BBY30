@@ -9,6 +9,7 @@ app.use(express.json());
 const fs = require("fs");
 const functions = require("firebase-functions");
 const admin = require("firebase-admin");
+const cors = require("cors");
 
 app.get("/", function(req, res) {
   const doc = fs.readFileSync("./public/html/main.html", "utf8");
@@ -21,8 +22,11 @@ app.get("/search", function(req, res) {
 });
 
 app.get("/nav", function(req, res) {
-  res.setHeader("Content-Type", "text/html");
-  res.send(fs.readFileSync("./public/data/footer.html", "utf8"));
+  cors()(req, res, () => {
+    res.setHeader("Content-Type", "text/html");
+    const doc = fs.readFileSync("./public/data/footer.html", "utf8");
+    res.send(doc);
+  });
 });
 
 app.get("/login", function(req, res) {

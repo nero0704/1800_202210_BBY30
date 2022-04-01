@@ -5,10 +5,10 @@ const path = require("path");
 module.exports = {
   // The entry point file described above
   entry: {
-    login: "../src/login.js",
-    main: "../src/main.js",
-    search: "../src/search.js",
-    request: "../src/request.js",
+    login: "./src/login.js",
+    main: "./src/main.js",
+    search: "./src/search.js",
+    request: "./src/request.js",
   },
   // The location of the build folder described above
   output: {
