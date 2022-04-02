@@ -11,8 +11,8 @@ const fs = require("fs");
 app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
-
 app.get("/", function(req, res) {
+
   const doc = fs.readFileSync("./public/html/main.html", "utf8");
   res.send(doc);
 });
