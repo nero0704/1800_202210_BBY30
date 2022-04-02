@@ -23,13 +23,13 @@ body {
 }
 
 #general-container {
-  background-color: rgb(207, 131, 207);
+  background-color: #F5F5F5;
   display: grid;
 }
 
 header {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: auto auto 10% 10%;
   grid-template-rows: 8vh;
   grid-template-areas: "logo . hamburger notification ";
@@ -102,7 +102,7 @@ header a {
 
 footer {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8vh;
   bottom: 0;
