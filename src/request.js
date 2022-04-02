@@ -1,6 +1,6 @@
 import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
-import { doc, setDoc, collection, getFirestore, getDoc } from 'firebase/firestore';
+import { doc, setDoc, collection, getFirestore } from 'firebase/firestore';
 
 run();
 

@@ -1,7 +1,6 @@
 import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
-import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
-
+import { doc, setDoc, collection, getFirestore, getDoc } from 'firebase/firestore';
 
 run();
 
@@ -15,22 +14,18 @@ async function run() {
     })
   const db = getFirestore();
 
-  let data = []
-  let snacks = []
   parse(searchBar);
 
   async function parse(callback) {
 
-    const querySnapshot = await getDocs(collection(db, "snacks"));
-    const userCardTemplate = document.querySelector("[data-user-template]");
-    const cardContainer = document.querySelector("[user-cards]");
+    const querySnapshot = await getDocs(collection(db, "requests"));
+    const userCardTemplate = document.querySelector("[data-request-template]");
+    const cardContainer = document.querySelector("[request-list]");
 
     querySnapshot.forEach((doc) => {
       data.push({
-        name: doc.id,
-        type: doc.data().type,
-        country: doc.data().country,
-        img: doc.data().img
+        title: doc.id,
+        desc: doc.description
       });
     })
     snacks = data.map(snack => {
@@ -51,7 +46,6 @@ async function run() {
 
 
 
-
   function searchBar() {
     console.log("Create cards");
     const searchInput = document.getElementById("mysearch");
@@ -67,4 +61,5 @@ async function run() {
       })
     });
   }
+}
 }
