@@ -1,25 +1,25 @@
 @media only screen and (max-width: 700px) {
   body {
-    background-color: #272727;
+    background-color: #fff;
     font-family: sans-serif;
   }
   .back a {
-    color: #fff;
+    color: #800020;
   }
   h1 {
-    color: #fff;
+    color: #800020;
   }
   p {
-    color: #fff;
+    color: #800020;
   }
   #map {
     height: 150px;
     width: 1fr;
-    border: solid 1px #fff;
+    border: solid 1px #800020;
     border-radius: 10px;
   }
   #ur {
-    color: #fff;
+    color: #800020;
   }
   .cardcontainer {
     display: grid;
@@ -31,7 +31,7 @@
   .card {
     display: grid;
     grid-template-columns: 1fr;
-    border: solid 1px #fff;
+    border: solid 1px #800020;
     height: 150px;
     width: 150px;
     border-radius: 10px;
