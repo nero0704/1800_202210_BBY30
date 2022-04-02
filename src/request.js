@@ -20,12 +20,12 @@ async function run() {
     var desc = document.getElementById("description").value;
     var cater = document.getElementById("select").value;
 
-    await setDoc(doc(collection(db, "requestform"), title), {
-        request: desc,
-        type: cater
+    await setDoc(doc(collection(db, "requests"), title), {
+        type: cater,
+        description: desc
       })
       .then(() => {
-        window.location.href = "/requestSuccesful";
+        window.location.href = "/requestSuccess";
       }).catch((error) => {
         console.log(error);
       })
