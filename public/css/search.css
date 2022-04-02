@@ -1,17 +1,17 @@
 @media only screen and (max-width: 700px) {
   body {
-    background-color: #272727;
+    background-color: #fff;
     font-family: sans-serif;
     margin: 0;
   }
   p {
-    color: #fff;
+    color: #800020;
   }
   h1 {
-    color: #fff;
+    color: #800020;
   }
   #line {
-    border: solid 1px #fff;
+    border: solid 1px #800020;
     margin-bottom: 30px;
     margin-top: 30px;
   }
@@ -31,14 +31,26 @@
   .card {
     display: grid;
     grid-template-columns: 1fr;
-    border: solid 1px #fff;
+    grid-template-rows: 50px 50px 50px;
+    border: solid 2px #800020;
     height: 150px;
     width: 150px;
     border-radius: 10px;
     justify-items: center;
+    align-content: center;
+  }
+  #name {
+    text-align: center;
+    grid-row: 1 / 2;
+  }
+  #snack {
+    grid-row: 2 / 3;
+  }
+  #country {
+    grid-row: 3 / 4;
   }
   .card:hover {
-    background-color: rgb(62, 62, 62);
+    background-color: rgba(62, 62, 62, 0.37);
     color: white;
     cursor: pointer;
     transform: scale(1.03);
