@@ -184,6 +184,7 @@ footer a:active {
 }
 
 #returnAccount {
+  transform: translate(-50px, 80px);
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#c25a4d, #ff2e09);
@@ -221,9 +222,7 @@ footer a:active {
 }
 
 #saveProfile {
-  float: right;
-  margin-right: 89px;
-  margin-top: 15px;
+  transform: translate(50px, 80px);
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
