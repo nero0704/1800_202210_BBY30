@@ -21,7 +21,7 @@ body {
 }
 
 #general-container {
-  background-color: #4A6572;
+  background-color: white;
   display: grid;
   height: 100%;
 }
