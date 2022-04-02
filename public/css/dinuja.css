@@ -123,6 +123,7 @@ footer a:active {
 }
 
 #submit {
+  transform: translate(190px, 80px);
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#464d55, #25292e);
@@ -159,7 +160,7 @@ footer a:active {
 }
 
 #cancel {
-  margin-left: 50px;
+  transform: translate(-190px, 80px);
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(#c25a4d, #ff2e09);
@@ -273,6 +274,7 @@ footer a:active {
 
 #cater {
   color: #800020;
+  margin-left: 10px;
 }
 
 #selection {
