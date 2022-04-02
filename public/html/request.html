@@ -51,23 +51,19 @@
         <strong>Requests</strong>
         <i class="fa-solid fa-pen-to-square" onclick="window.location.href = '/requestForm'"></i>
       </div>
-      <div id="request-list">
-        <div class="requests">dasdad</div>
-        <div class="requests">asdasd</div>
-        <div class="requests">asdasd</div>
-        <div class="requests">asdasd</div>
-        <div class="requests">asdasd</div>
-        <div class="requests">asdasd</div>
-      </div>
+      <div id="request-list" request-list></div>
     </div>
 
     <footer id="footer-nav">
     </footer>
   </div>
 
-
-
-
+  <template data-request-template>
+    <div class="requests">
+      <strong id="title" data-name></strong>
+      <p id="description" data-descrption></p>
+    </div>
+  </template>
 
   <!-- Authentication javascript-->
   <script src="/js/dist/main.bundle.js"></script>
