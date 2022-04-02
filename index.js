@@ -8,6 +8,10 @@ const app = express();
 app.use(express.json());
 const fs = require("fs");
 
+app.use("/js", express.static("./public/js"));
+app.use("/css", express.static("./public/css"));
+app.use("/img", express.static("./public/img"));
+
 app.get("/", function(req, res) {
   const doc = fs.readFileSync("./public/html/main.html", "utf8");
   res.send(doc);
@@ -67,6 +71,12 @@ app.get("/request", function(req, res) {
   res.setHeader("Content-Type", "text/html");
   res.send(fs.readFileSync("./public/html/request.html", "utf8"));
 });
+
+app.get("/requestForm", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./public/html/requestForm.html", "utf8"));
+});
+
 
 app.get("/requestSuccess", function(req, res) {
   res.setHeader("Content-Type", "text/html");

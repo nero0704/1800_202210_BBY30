@@ -128,6 +128,16 @@ header a {
   background-color: green;
 }
 
+#welcome strong {
+  display: block;
+  width: fit-content;
+  height: fit-content;
+  align-self: center;
+  justify-self: center;
+  font-size: 7vh;
+  text-align: center;
+}
+
 #popular-general {
   display: grid;
   grid-template-columns: auto auto;
