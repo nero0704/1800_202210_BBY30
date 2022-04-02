@@ -73,7 +73,7 @@
     transform: scale(1.00);
     transition: all 1s ease;
   }
-  #text {
+  .text {
     grid-column: 2 / 3;
   }
   #line {
@@ -93,7 +93,7 @@
     transform: scale(1.00);
     transition: all 1s ease;
   }
-  #icon {
+  .icon {
     grid-column: 1 / 2;
     align-self: center;
     padding-left: 10px;
