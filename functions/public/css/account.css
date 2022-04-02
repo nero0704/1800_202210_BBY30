@@ -1,0 +1,126 @@
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 40px 135px 20px 50px 1fr;
+    height: 100vh;
+  }
+  .back {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .box1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: center;
+    justify-content: center;
+    text-align: center;
+    grid-row-gap: 10px;
+  }
+  .pic {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    height: 2vw;
+  }
+  #name {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+  #edit {
+    width: 100px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+    justify-self: center;
+    /* background-color: white;
+    color: black;
+    border: 2px solid #800020; */
+  }
+  .saved {
+    display: grid;
+    height: 40px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    background-color: #800020;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    align-items: center;
+    color: #fff;
+    padding-left: 10px;
+  }
+  .box2 {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .snack {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .snack:hover {
+    background-color: rgba(62, 62, 62, 0.37);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.00);
+    transition: all 1s ease;
+  }
+  #text {
+    grid-column: 2 / 3;
+  }
+  #line {
+    border-bottom: solid 1px #800020;
+  }
+  .country {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 1fr;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .country:hover {
+    background-color: rgba(62, 62, 62, 0.37);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.00);
+    transition: all 1s ease;
+  }
+  #icon {
+    grid-column: 1 / 2;
+    align-self: center;
+    padding-left: 10px;
+  }
+  .empty {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    background-color: #800020;
+    height: 20px;
+  }
+  #signout {
+    display: grid;
+    align-items: center;
+    padding-left: 10px;
+  }
+  #signout:hover {
+    background-color: rgba(62, 62, 62, 0.37);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.00);
+    transition: all 1s ease;
+  }
+  .empty2 {
+    display: grid;
+    grid-column: 1 / 2;
+    grid-row: 6 / 7;
+    background-color: #800020
+  }
+}
