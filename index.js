@@ -72,6 +72,12 @@ app.get("/request", function(req, res) {
   res.send(fs.readFileSync("./public/html/request.html", "utf8"));
 });
 
+app.get("/requestForm", function(req, res) {
+  res.setHeader("Content-Type", "text/html");
+  res.send(fs.readFileSync("./public/html/requestForm.html", "utf8"));
+});
+
+
 app.get("/requestSuccess", function(req, res) {
   res.setHeader("Content-Type", "text/html");
   res.send(fs.readFileSync("./public/html/requestSuccess.html", "utf8"));
