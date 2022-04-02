@@ -39,6 +39,7 @@ async function run() {
       const type = card.querySelector("[data-snack]")
       const country = card.querySelector("[data-country]")
       const img = card.querySelector("[data-country]")
+
       name.textContent = snack.name
       type.textContent = snack.type
       country.textContent = snack.country

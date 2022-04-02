@@ -49,7 +49,7 @@
 
       <div id="header">
         <strong>Requests</strong>
-        <i class="fa-solid fa-pen-to-square" onclick="window.location.href = '/requestForm'"></i>
+        <i class="fa-solid fa-plus" onclick="window.location.href = '/requestForm'"></i>
       </div>
       <div id="request-list" request-list></div>
     </div>
@@ -60,13 +60,14 @@
 
   <template data-request-template>
     <div class="requests">
-      <strong id="title" data-name></strong>
-      <p id="description" data-descrption></p>
+      <strong id="title" data-title></strong>
+      <strong id="type" data-type></strong>
+      <p id="description" data-description></p>
     </div>
   </template>
 
   <!-- Authentication javascript-->
-  <script src="/js/dist/main.bundle.js"></script>
+  <script src="/js/dist/requestlist.bundle.js"></script>
 
 </body>
 

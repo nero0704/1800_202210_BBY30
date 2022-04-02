@@ -96,7 +96,10 @@ header a {
 }
 
 .requests {
+  display: grid;
+  grid-template-columns: 50% 50%;
   min-width: 90vw;
+  height: fit-content;
   border: black solid 3px;
 }
 
