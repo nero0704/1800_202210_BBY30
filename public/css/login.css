@@ -11,7 +11,7 @@
 
 body {
   margin: 0;
-  background-color: #92d5e6;
+  background-color: #800020;
 }
 
 #general-container {
@@ -38,6 +38,11 @@ header p {
 
 header small {
   font-size: 4vh;
+  color: #800020;
+}
+
+header strong {
+  color: #800020;
 }
 
 #main.login {
@@ -65,7 +70,7 @@ header small {
 
 #main a {
   text-decoration: none;
-  color: #92d5e6;
+  color: #800020;
 }
 
 input {
@@ -82,6 +87,6 @@ input {
   position: absolute;
   text-align: right;
   align-self: center;
-  color: #92d5e6;
+  color: #800020;
   font-size: 2.5vh;
 }
