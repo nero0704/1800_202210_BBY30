@@ -10,6 +10,9 @@
   h1 {
     color: #800020;
   }
+  #popularsnacks {
+    padding-left: 20px;
+  }
   #line {
     border: solid 1px #800020;
     margin-bottom: 30px;
@@ -161,7 +164,7 @@
   }
   footer {
     display: grid;
-    background-color: grey;
+    background-color: #800020;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 8vh;
     bottom: 0;
