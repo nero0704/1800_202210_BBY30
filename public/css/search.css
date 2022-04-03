@@ -3,12 +3,14 @@
     background-color: #fff;
     font-family: sans-serif;
     margin: 0;
+    overflow-x: hidden;
   }
   p {
     color: #800020;
   }
   h1 {
     color: #800020;
+    transform: translate(100px);
   }
   #line {
     border: solid 1px #800020;
@@ -161,7 +163,7 @@
   }
   footer {
     display: grid;
-    background-color: grey;
+    background-color: #800020;
     grid-template-columns: 25% 25% 25% 25%;
     grid-template-rows: 8vh;
     bottom: 0;
