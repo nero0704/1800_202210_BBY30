@@ -1,6 +1,6 @@
 import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
-import { doc, setDoc, collection, getFirestore, getDoc } from 'firebase/firestore';
+import { doc, setDoc, collection, getFirestore } from 'firebase/firestore';
 
 run();
 
@@ -20,12 +20,12 @@ async function run() {
     var desc = document.getElementById("description").value;
     var cater = document.getElementById("select").value;
 
-    await setDoc(doc(collection(db, "requestform"), title), {
-        request: desc,
-        type: cater
+    await setDoc(doc(collection(db, "requests"), title), {
+        type: cater,
+        description: desc
       })
       .then(() => {
-        window.location.href = "/app/requestSuccesful";
+        window.location.href = "/app/requestSuccess";
       }).catch((error) => {
         console.log(error);
       })

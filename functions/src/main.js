@@ -1,7 +1,7 @@
 import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
 import { overlay } from './main-overlay.js';
-import { getFirestore } from 'firebase/firestore';
+import { getFirestore, getDoc, doc, collection } from 'firebase/firestore';
 
 run();
 
@@ -19,4 +19,8 @@ async function run() {
     console.log("New is true");
     overlay(db, user.uid);
   }
+
+  const userDoc = await getDoc(doc(collection(db, "users"), user.uid));
+  console.log(userDoc.data())
+  const welcomeText = document.getElementById("welcome").querySelector("strong").innerText = "Welcome Home, " + userDoc.data().firstname + "!"
 }

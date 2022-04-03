@@ -3,18 +3,6 @@ import { ready, client } from './client.js';
 import { collection, getDocs, getFirestore, where, query } from 'firebase/firestore';
 
 
-
-class Snacks {
-  constructor(snack, country, type) {
-    this.snack = snack;
-    this.country = country;
-    this.type = type;
-  }
-}
-
-
-
-
 run();
 
 async function run() {
@@ -42,7 +30,8 @@ async function run() {
         name: doc.id,
         type: doc.data().type,
         country: doc.data().country,
-        img: doc.data().img
+        img: doc.data().img,
+        addresses: doc.data().store
       });
     })
     snacks = data.map(snack => {
@@ -50,7 +39,7 @@ async function run() {
       const name = card.querySelector("[data-name]")
       const type = card.querySelector("[data-snack]")
       const country = card.querySelector("[data-country]")
-      const img = card.querySelector("[data-country]")
+
       name.textContent = snack.name
       type.textContent = snack.type
       country.textContent = snack.country
@@ -58,6 +47,15 @@ async function run() {
       return { name: snack.name, type: snack.type, country: snack.country, element: card }
     })
     console.log(snacks)
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+      card.addEventListener("click", () => {
+        const name = card.querySelector("#name").innerHTML;
+        localStorage.setItem("name", name);
+        window.location.href = "/app/card"
+      })
+    })
     callback();
   }
 

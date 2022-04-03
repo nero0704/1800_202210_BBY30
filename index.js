@@ -7,15 +7,12 @@ const express = require("express");
 const app = express();
 app.use(express.json());
 const fs = require("fs");
-const functions = require("firebase-functions");
-const admin = require("firebase-admin");
-const cors = require("cors");
 
 app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
-
 app.get("/", function(req, res) {
+
   const doc = fs.readFileSync("./public/html/main.html", "utf8");
   res.send(doc);
 });
@@ -26,11 +23,9 @@ app.get("/search", function(req, res) {
 });
 
 app.get("/nav", function(req, res) {
-  cors((req, res) => {
-    res.setHeader("Content-Type", "text/html");
-    const doc = fs.readFileSync("./public/data/footer.html", "utf8");
-    res.send(doc);
-  })
+  res.setHeader("Content-Type", "text/html");
+  const doc = fs.readFileSync("./public/data/footer.html", "utf8");
+  res.send(doc);
 });
 
 app.get("/login", function(req, res) {
@@ -88,4 +83,7 @@ app.get("/requestSuccess", function(req, res) {
   res.send(fs.readFileSync("./public/html/requestSuccess.html", "utf8"));
 });
 
-exports.app = functions.https.onRequest(app);
+let port = 8000;
+app.listen(port, function() {
+  console.log("Example app listening on port " + port + "!");
+});

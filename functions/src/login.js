@@ -21,7 +21,7 @@ async function run() {
 
   const input = document.querySelectorAll("input");
   input.forEach((i) => {
-    if (window.location.pathname == "/app/login") {
+    if (window.location.pathname == "/login") {
       i.addEventListener("input", disableLogin);
     } else {
       document.querySelector("button").disabled = true;
@@ -33,7 +33,8 @@ async function run() {
   function disableSignup() {
     if (document.getElementById("login-email").value &&
       document.getElementById("login-password").value &&
-      document.getElementById("login-name").value &&
+      document.getElementById("login-first").value &&
+      document.getElementById("login-last").value &&
       document.getElementById("login-username").value) {
       document.querySelector("button").disabled = false;
       console.log("Enabled.")
@@ -90,12 +91,13 @@ async function run() {
         console.log(user);
         await setDoc(doc(collection(db, "users"), user.uid), {
           email: document.getElementById("login-email").value,
-          name: document.getElementById("login-name").value,
+          firstname: document.getElementById("login-first").value,
+          lastname: document.getElementById("login-last").value,
           username: document.getElementById("login-username").value
         })
         console.log("Successfully Signed up.");
         localStorage.setItem('new', 'true');
-        window.location.href = "/app";
+        window.location.href = "/";
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -110,7 +112,7 @@ async function run() {
         console.log("Successfully Logged in.");
         const user = userCredential.user;
         console.log(user);
-        window.location.href = "/app";
+        window.location.href = "/";
       })
       .catch((error) => {
         const errorCode = error.code;
