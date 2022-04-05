@@ -7,7 +7,7 @@ async function run(callback) {
   const user = await init()
     .catch((error) => {
       console.log(error)
-      window.location.href = "/login";
+      window.location.href = "/app/login";
     })
   const db = getFirestore();
 
