@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="/css/request.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
 
   <!-- Favicons -->
   <link rel="icon" type="images/favicons" href="https://storage.cloud.google.com/taste-of-home/public/img/favicons/favicon-16x16.png" sizes="16x16">
@@ -49,7 +49,7 @@
 
       <div id="header">
         <strong>Requests</strong>
-        <i class="fa-solid fa-pen-to-square" onclick="window.location.href = '/requestForm'"></i>
+        <i class="fa-solid fa-plus" onclick="window.location.href = '/requestForm'"></i>
       </div>
       <div id="request-list" request-list></div>
     </div>
@@ -60,13 +60,14 @@
 
   <template data-request-template>
     <div class="requests">
-      <strong id="title" data-name></strong>
-      <p id="description" data-descrption></p>
+      <strong id="title" data-title></strong>
+      <strong id="type" data-type></strong>
+      <p id="description" data-description></p>
     </div>
   </template>
 
   <!-- Authentication javascript-->
-  <script src="/js/dist/main.bundle.js"></script>
+  <script src="/js/dist/requestlist.bundle.js"></script>
 
 </body>
 

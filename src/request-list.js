@@ -1,6 +1,6 @@
 import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
-import { doc, setDoc, collection, getFirestore, getDoc } from 'firebase/firestore';
+import { collection, getFirestore, getDocs } from 'firebase/firestore';
 
 run();
 
@@ -14,9 +14,12 @@ async function run() {
     })
   const db = getFirestore();
 
-  parse(searchBar);
+  let data = []
+  let requests = []
 
-  async function parse(callback) {
+  parse();
+
+  async function parse() {
 
     const querySnapshot = await getDocs(collection(db, "requests"));
     const userCardTemplate = document.querySelector("[data-request-template]");
@@ -25,41 +28,22 @@ async function run() {
     querySnapshot.forEach((doc) => {
       data.push({
         title: doc.id,
-        desc: doc.description
+        type: doc.data().type,
+        description: doc.data().description
       });
     })
-    snacks = data.map(snack => {
+
+    requests = data.map(request => {
       const card = userCardTemplate.content.cloneNode(true).children[0]
-      const name = card.querySelector("[data-name]")
-      const type = card.querySelector("[data-snack]")
-      const country = card.querySelector("[data-country]")
-      const img = card.querySelector("[data-country]")
-      name.textContent = snack.name
-      type.textContent = snack.type
-      country.textContent = snack.country
+      const title = card.querySelector("[data-title]")
+      const type = card.querySelector("[data-type]")
+      const description = card.querySelector("[data-description]")
+
+      title.textContent = request.title
+      type.textContent = request.type
+      description.textContent = request.description
       cardContainer.append(card);
-      return { name: snack.name, type: snack.type, country: snack.country, element: card }
+      return { title: request.title, type: request.type, description: request.description, element: card }
     })
-    console.log(snacks)
-    callback();
   }
-
-
-
-  function searchBar() {
-    console.log("Create cards");
-    const searchInput = document.getElementById("mysearch");
-    searchInput.addEventListener("input", (e) => {
-      const value = e.target.value.toLowerCase()
-      console.log(value)
-      snacks.forEach(snack => {
-        const isVisible =
-          snack.name.toLowerCase().includes(value) ||
-          snack.country.toLowerCase().includes(value) ||
-          snack.type.toLowerCase().includes(value)
-        snack.element.classList.toggle("hide", !isVisible)
-      })
-    });
-  }
-}
 }

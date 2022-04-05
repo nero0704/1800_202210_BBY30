@@ -1,16 +1,20 @@
 * {
   max-width: 700px;
   font-family: Fredoka;
-  color: white;
+  color: #800020;
 }
 
 @font-face {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   src: url();
 }
 
 body {
   margin: 0;
+}
+
+#request {
+  color: #800020;
 }
 
 #tags-container {
@@ -23,13 +27,13 @@ body {
 }
 
 #general-container {
-  background-color: rgb(207, 131, 207);
+  background-color: #F5F5F5;
   display: grid;
 }
 
 header {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: auto auto 10% 10%;
   grid-template-rows: 8vh;
   grid-template-areas: "logo . hamburger notification ";
@@ -43,6 +47,11 @@ header p {
   margin-left: 10%;
   width: fit-content;
   font-size: 200%;
+  color: white;
+}
+
+header strong {
+  color: white;
 }
 
 header a {
@@ -51,6 +60,9 @@ header a {
   text-decoration: none;
   font-size: 200%;
   align-items: center;
+}
+
+i {
   color: white;
 }
 
@@ -81,6 +93,7 @@ header a {
 
 #header i {
   font-size: 5vh;
+  color: #800020;
 }
 
 #request-list {
@@ -96,13 +109,16 @@ header a {
 }
 
 .requests {
+  display: grid;
+  grid-template-columns: 50% 50%;
   min-width: 90vw;
+  height: fit-content;
   border: black solid 3px;
 }
 
 footer {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8vh;
   bottom: 0;

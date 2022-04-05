@@ -3,12 +3,14 @@
     background-color: #fff;
     font-family: sans-serif;
     margin: 0;
+    overflow-x: hidden;
   }
   p {
     color: #800020;
   }
   h1 {
     color: #800020;
+    transform: translate(100px);
   }
   #popularsnacks {
     padding-left: 20px;

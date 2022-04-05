@@ -5,7 +5,7 @@
 }
 
 @font-face {
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   src: url();
 }
 
@@ -81,7 +81,7 @@ body {
 
 header {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: auto auto 10% 10%;
   grid-template-rows: 8vh;
   grid-template-areas: "logo . hamburger notification ";
@@ -125,7 +125,7 @@ header a {
 #welcome {
   display: grid;
   grid-area: welcome;
-  background-color: green;
+  background-color: white;
 }
 
 #welcome strong {
@@ -136,6 +136,7 @@ header a {
   justify-self: center;
   font-size: 7vh;
   text-align: center;
+  color: #800020;
 }
 
 #popular-general {
@@ -146,11 +147,11 @@ header a {
   row-gap: 1%;
   column-gap: 2%;
   padding: 5%;
-  background-color: silver;
+  background-color: #AE002B;
 }
 
 #popular-general a {
-  background-color: grey;
+  background-color: #F7D6D0;
 }
 
 #popular-prefer {
@@ -161,11 +162,11 @@ header a {
   row-gap: 1%;
   column-gap: 2%;
   padding: 5%;
-  background-color: pink;
+  background-color: #DC0037;
 }
 
 #popular-prefer a {
-  background-color: grey;
+  background-color: #F7D6D0;
 }
 
 .article-title {
@@ -174,7 +175,7 @@ header a {
 
 footer {
   display: grid;
-  background-color: grey;
+  background-color: #800020;
   grid-template-columns: 25% 25% 25% 25%;
   grid-template-rows: 8vh;
   bottom: 0;

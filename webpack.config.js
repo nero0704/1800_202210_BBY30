@@ -9,8 +9,8 @@ module.exports = {
     main: "./src/main.js",
     search: "./src/search.js",
     request: "./src/request.js",
-    account: "./src/account.js",
-    editProfile: "./src/editProfile.js"
+    requestlist: "./src/request-list.js",
+    card: "./src/card.js"
   },
   // The location of the build folder described above
   output: {
