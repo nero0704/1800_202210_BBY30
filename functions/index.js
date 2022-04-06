@@ -22,11 +22,11 @@ app.get("/search", function(req, res) {
 });
 
 app.get("/nav", function(req, res) {
-  cors()(req, res, () => {
+  cors((req, res) => {
     res.setHeader("Content-Type", "text/html");
     const doc = fs.readFileSync("https://storage.cloud.google.com/taste-of-home/public/html/footer.html", "utf8");
     res.send(doc);
-  });
+  })
 });
 
 app.get("/login", function(req, res) {
