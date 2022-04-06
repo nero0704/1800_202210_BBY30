@@ -1,4 +1,3 @@
-import { init } from './firebaseInit.js';
-import { ready, client } from './client.js';
-import { overlay } from './main-overlay.js';
-import { getFirestore, getDoc, doc, collection } from 'firebase/firestore';
+import { ajaxGET, client, ready } from "./client";
+import { init } from "./firebaseInit";
+import { getFirestore, updateDoc, doc, collection } from "firebase/firestore";

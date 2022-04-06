@@ -1,6 +1,24 @@
-import { ajaxGET, client, ready } from "./client";
-import { init } from "./firebaseInit";
-import { getFirestore, updateDoc, doc, collection } from "firebase/firestore";
+import { init } from './firebaseInit.js';
+import { ready, client } from './client.js';
+import { overlay } from './main-overlay.js';
+import { getFirestore, getDoc, doc, collection } from 'firebase/firestore';
+
+
+run();
+
+async function run() {
+  ready(client);
+  const user = await init()
+    .catch((error) => {
+      console.log(error)
+      window.location.href = "/login";
+    })
+  const db = getFirestore();
+  const userDoc = await getDoc(doc(collection(db, "users"), user.uid));
+  console.log(userDoc.data())
+  const welcomeText = document.getElementById("welcome").querySelector("strong").innerText = userDoc.data().firstname
+  console.log(userDoc.data().firstname)
+}
 
 window.snackOverlay = async() => {
 

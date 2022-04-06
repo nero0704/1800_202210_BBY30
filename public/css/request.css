@@ -137,3 +137,7 @@ footer a {
 footer a:active {
   font-size: 200%;
 }
+
+#plus {
+  cursor: pointer;
+}
