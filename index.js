@@ -52,9 +52,9 @@ app.get("/new", function(req, res) {
   }
 });
 
-app.get("/test", function(req, res) {
+app.get("/card", function(req, res) {
   res.setHeader("Content-Type", "text/html");
-  res.send(fs.readFileSync("./public/html/test.html", "utf8"));
+  res.send(fs.readFileSync("./public/html/card.html", "utf8"));
 });
 
 app.get("/account", function(req, res) {

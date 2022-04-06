@@ -46,22 +46,4 @@ async function run() {
       return { title: request.title, type: request.type, description: request.description, element: card }
     })
   }
-
-
-
-  // function searchBar() {
-  //   console.log("Create cards");
-  //   const searchInput = document.getElementById("mysearch");
-  //   searchInput.addEventListener("input", (e) => {
-  //     const value = e.target.value.toLowerCase()
-  //     console.log(value)
-  //     requests.forEach(request => {
-  //       const isVisible =
-  //       request.name.toLowerCase().includes(value) ||
-  //       request.country.toLowerCase().includes(value) ||
-  //       request.type.toLowerCase().includes(value)
-  //         request.element.classList.toggle("hide", !isVisible)
-  //     })
-  //   });
-  // }
 }

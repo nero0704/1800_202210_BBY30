@@ -12,6 +12,9 @@
     color: #800020;
     transform: translate(100px);
   }
+  #popularsnacks {
+    padding-left: 20px;
+  }
   #line {
     border: solid 1px #800020;
     margin-bottom: 30px;

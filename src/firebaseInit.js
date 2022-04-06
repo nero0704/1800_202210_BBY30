@@ -1,6 +1,5 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { ajaxGET } from './client';
 
 function init() {
   return new Promise((resolve, reject) => {

@@ -1,7 +1,7 @@
 * {
   max-width: 700px;
   font-family: Fredoka;
-  color: white;
+  color: #800020;
 }
 
 @font-face {
@@ -47,6 +47,11 @@ header p {
   margin-left: 10%;
   width: fit-content;
   font-size: 200%;
+  color: white;
+}
+
+header strong {
+  color: white;
 }
 
 header a {
@@ -55,6 +60,9 @@ header a {
   text-decoration: none;
   font-size: 200%;
   align-items: center;
+}
+
+i {
   color: white;
 }
 
@@ -85,6 +93,7 @@ header a {
 
 #header i {
   font-size: 5vh;
+  color: #800020;
 }
 
 #request-list {
@@ -127,4 +136,8 @@ footer a {
 
 footer a:active {
   font-size: 200%;
+}
+
+#plus {
+  cursor: pointer;
 }
