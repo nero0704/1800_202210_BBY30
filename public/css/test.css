@@ -3,8 +3,8 @@
     background-color: #fff;
     font-family: sans-serif;
   }
-  .back a {
-    color: #800020;
+  .back {
+    cursor: pointer;
   }
   h1 {
     color: #800020;
@@ -49,5 +49,35 @@
   }
   #line {
     border-bottom: solid 2px #fff;
+  }
+  header {
+    display: grid;
+    background-color: #800020;
+    grid-template-columns: auto auto 10% 10%;
+    grid-template-rows: 8vh;
+    grid-template-areas: "logo . hamburger notification ";
+    top: 0;
+    position: sticky;
+  }
+  header p {
+    grid-area: logo;
+    margin: auto 0;
+    margin-left: 10%;
+    width: fit-content;
+    font-size: 200%;
+  }
+  header a {
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    font-size: 200%;
+    align-items: center;
+    color: white;
+  }
+  #hamburger {
+    grid-area: hamburger;
+  }
+  #notification {
+    grid-area: notification;
   }
 }
