@@ -126,7 +126,7 @@ footer a:active {
   transform: translate(170px, 80px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
+  background-image: linear-gradient(#c25a4d, #ff2e09);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
@@ -163,7 +163,7 @@ footer a:active {
   transform: translate(-175px, 80px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#c25a4d, #ff2e09);
+  background-image: linear-gradient(#464d55, #25292e);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
@@ -187,7 +187,7 @@ footer a:active {
   transform: translate(-50px, 80px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#c25a4d, #ff2e09);
+  background-image: linear-gradient(#464d55, #25292e);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
@@ -225,7 +225,7 @@ footer a:active {
   transform: translate(50px, 80px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
+  background-image: linear-gradient(#c25a4d, #ff2e09);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
@@ -296,7 +296,7 @@ footer a:active {
   transform: translate(-190px, 120px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#c25a4d, #ff2e09);
+  background-image: linear-gradient(#464d55, #25292e);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);
@@ -366,7 +366,7 @@ footer a:active {
   transform: translate(190px, 120px);
   align-items: center;
   background-color: initial;
-  background-image: linear-gradient(#464d55, #25292e);
+  background-image: linear-gradient(#c25a4d, #ff2e09);
   border-radius: 6px;
   border-width: 0;
   box-shadow: 0 10px 20px rgba(0, 0, 0, .1), 0 3px 6px rgba(0, 0, 0, .05);

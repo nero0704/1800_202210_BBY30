@@ -31,7 +31,7 @@ async function run() {
         type: doc.data().type,
         country: doc.data().country,
         img: doc.data().img,
-        addresses: doc.data().store
+        adress: doc.data().store
       });
     })
     snacks = data.map(snack => {
@@ -39,12 +39,15 @@ async function run() {
       const name = card.querySelector("[data-name]")
       const type = card.querySelector("[data-snack]")
       const country = card.querySelector("[data-country]")
+      const adress = card.querySelector("[data-adress]")
 
       name.textContent = snack.name
       type.textContent = snack.type
       country.textContent = snack.country
+      adress.textContent = snack.adress
+
       cardContainer.append(card);
-      return { name: snack.name, type: snack.type, country: snack.country, element: card }
+      return { name: snack.name, type: snack.type, country: snack.country, adress: snack.adress, element: card }
     })
     console.log(snacks)
 
@@ -52,7 +55,9 @@ async function run() {
     cards.forEach(card => {
       card.addEventListener("click", () => {
         const name = card.querySelector("#name").innerHTML;
+        const adress = card.querySelector("#adress").innerHTML;
         localStorage.setItem("name", name);
+        localStorage.setItem("adress", adress);
         window.location.href = "/card"
       })
     })

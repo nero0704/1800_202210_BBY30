@@ -2,7 +2,8 @@ import { init } from './firebaseInit.js';
 import { ready, client } from './client.js';
 import { doc, collection, getDoc, getFirestore } from 'firebase/firestore';
 
-async function run(callback) {
+run();
+async function run() {
   ready(client);
   const user = await init()
     .catch((error) => {
@@ -12,23 +13,17 @@ async function run(callback) {
   const db = getFirestore();
 
   const snack = localStorage.getItem("name");
-  localStorage.removeItem("name");
-
-  const snackObject = await getDoc(doc(collection(db, "snacks"), snack))
+  const store = localStorage.getItem("adress");
 
   const name = document.querySelector("#name");
   const adress = document.querySelector("#adress");
 
-  name.innerHTML = snackObject.id;
-  adress.innerHTML = snackObject.data().store;
-
-  callback();
+  name.innerHTML = snack;
+  adress.innerHTML = store;
 }
 
 window.initMap = () => {
-  run(() => {
-    initialize(codeAddress)
-  });
+  initialize(codeAddress);
 }
 
 var geocoder;
@@ -47,7 +42,11 @@ function initialize(callback) {
 }
 
 function codeAddress() {
-  var address = document.getElementById('adress').innerHTML;
+
+  const snack = localStorage.getItem("name");
+  const store = localStorage.getItem("adress");
+
+  var address = store;
   geocoder.geocode({ 'address': address }, function(results, status) {
     if (status == 'OK') {
       map.setCenter(results[0].geometry.location);

@@ -5,6 +5,9 @@
     margin: 0;
     overflow-x: hidden;
   }
+  body::-webkit-scrollbar {
+    display: none;
+  }
   p {
     color: #800020;
   }
@@ -53,6 +56,9 @@
   }
   #country {
     grid-row: 3 / 4;
+  }
+  #adress {
+    display: none;
   }
   .card:hover {
     background-color: rgba(62, 62, 62, 0.37);

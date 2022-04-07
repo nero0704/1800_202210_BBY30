@@ -10,7 +10,8 @@ module.exports = {
     search: "./src/search.js",
     request: "./src/request.js",
     requestlist: "./src/request-list.js",
-    card: "./src/card.js"
+    card: "./src/card.js",
+    account: "./src/account.js"
   },
   // The location of the build folder described above
   output: {
