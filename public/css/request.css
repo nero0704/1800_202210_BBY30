@@ -1,0 +1,143 @@
+* {
+  max-width: 700px;
+  font-family: Fredoka;
+  color: #800020;
+}
+
+@font-face {
+  font-family: 'Open Sans', sans-serif;
+  src: url();
+}
+
+body {
+  margin: 0;
+}
+
+#request {
+  color: #800020;
+}
+
+#tags-container {
+  display: grid;
+  grid-template-columns: 45% 45%;
+  grid-template-rows: repeat(9, 1fr);
+  column-gap: 10%;
+  row-gap: 2%;
+  padding: 5%;
+}
+
+#general-container {
+  background-color: #F5F5F5;
+  display: grid;
+}
+
+header {
+  display: grid;
+  background-color: #800020;
+  grid-template-columns: auto auto 10% 10%;
+  grid-template-rows: 8vh;
+  grid-template-areas: "logo . hamburger notification ";
+  top: 0;
+  position: sticky;
+}
+
+header p {
+  grid-area: logo;
+  margin: auto 0;
+  margin-left: 10%;
+  width: fit-content;
+  font-size: 200%;
+  color: white;
+}
+
+header strong {
+  color: white;
+}
+
+header a {
+  display: grid;
+  text-align: center;
+  text-decoration: none;
+  font-size: 200%;
+  align-items: center;
+}
+
+i {
+  color: white;
+}
+
+#hamburger {
+  grid-area: hamburger;
+}
+
+#notification {
+  grid-area: notification;
+}
+
+#main {
+  display: grid;
+  grid-template-rows: 10% 90%;
+  height: 84vh;
+}
+
+#header {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  padding: 2vw;
+}
+
+#header strong {
+  font-size: 5vh;
+  margin-left: 2vw;
+}
+
+#header i {
+  font-size: 5vh;
+  color: #800020;
+}
+
+#request-list {
+  display: grid;
+  justify-content: center;
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+#request-list::-webkit-scrollbar {
+  display: none;
+}
+
+.requests {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  min-width: 90vw;
+  height: fit-content;
+  border: black solid 3px;
+}
+
+footer {
+  display: grid;
+  background-color: #800020;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 8vh;
+  bottom: 0;
+  position: sticky;
+}
+
+footer a {
+  display: grid;
+  text-align: center;
+  text-decoration: none;
+  font-size: 150%;
+  align-items: center;
+  color: white;
+}
+
+footer a:active {
+  font-size: 200%;
+}
+
+#plus {
+  cursor: pointer;
+}

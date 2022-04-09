@@ -1,0 +1,92 @@
+* {
+  max-width: 700px;
+  font-family: Fredoka;
+  color: black;
+}
+
+@font-face {
+  font-family: 'Fredoka', sans-serif;
+  src: url();
+}
+
+body {
+  margin: 0;
+  background-color: #800020;
+}
+
+#general-container {
+  margin: 12.5vh auto;
+  background-color: white;
+  border-radius: 30px;
+  display: grid;
+  grid-template-rows: 30% 70%;
+  width: 60vw;
+  height: 75vh;
+}
+
+header {
+  display: grid;
+  top: 0;
+  position: sticky;
+}
+
+header p {
+  margin: auto;
+  text-align: center;
+  font-size: 6vh;
+}
+
+header small {
+  font-size: 4vh;
+  color: #800020;
+}
+
+header strong {
+  color: #800020;
+}
+
+#main.login {
+  display: grid;
+  grid-template-rows: 10% 10% 10% 4% 4% 4%;
+  row-gap: 4%;
+  width: 80%;
+  justify-self: center;
+  font-size: 12pt;
+}
+
+#main.signup {
+  display: grid;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 4%;
+  row-gap: 4%;
+  width: 80%;
+  justify-self: center;
+  font-size: 12pt;
+}
+
+#main p {
+  text-align: center;
+  margin: 0;
+}
+
+#main a {
+  text-decoration: none;
+  color: #800020;
+}
+
+input {
+  color: black;
+}
+
+#password {
+  display: grid;
+}
+
+#show-password {
+  margin-left: calc(60vw * 0.70);
+  width: 3vh;
+  position: absolute;
+  text-align: right;
+  align-self: center;
+  color: #800020;
+  font-size: 2.5vh;
+}

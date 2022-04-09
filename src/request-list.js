@@ -5,12 +5,12 @@ import { collection, getFirestore, getDocs } from 'firebase/firestore';
 run();
 
 async function run() {
-
+  // Instantiates firebase app.
   ready(client);
   const user = await init()
     .catch((error) => {
       console.log(error)
-      window.location.href = "/app/login";
+      window.location.href = "/login";
     })
   const db = getFirestore();
 
@@ -20,11 +20,12 @@ async function run() {
   parse();
 
   async function parse() {
-
+    // Pulls all requests from firestore and puts into the requests list.
     const querySnapshot = await getDocs(collection(db, "requests"));
     const userCardTemplate = document.querySelector("[data-request-template]");
     const cardContainer = document.querySelector("[request-list]");
 
+    // Data snapshot
     querySnapshot.forEach((doc) => {
       data.push({
         title: doc.id,
@@ -33,6 +34,7 @@ async function run() {
       });
     })
 
+    // Makes a new data map of requests
     requests = data.map(request => {
       const card = userCardTemplate.content.cloneNode(true).children[0]
       const title = card.querySelector("[data-title]")

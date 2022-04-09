@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/dinuja.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+
+  <!-- Favicons -->
+  <link rel="icon" type="images/favicons" href="https://storage.cloud.google.com/taste-of-home/public/img/favicons/favicon-32x32.png" sizes="32x32">
+
+  <!-- Title -->
+  <title>Taste Of Home</title>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+  <div id="general-container">
+    <header>
+      <p id="tasteHome"><strong>Taste</strong> of <strong>Home</strong></p>
+      <a href="#Home" id="hamburger"><i class="fa-solid fa-bell"></i></a>
+      <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
+    </header>
+
+    <!--main div for request form-->
+    <div id="main">
+      <!-- creates dropdown of catergories -->
+      <h1 id="form">Request Form</h1>
+      <div class="form-group">
+        <label id="title">Title</label>
+        <div id="col-lg-8">
+          <input id="title-text" class="form-control" type="text" placeholder="Enter title of post">
+        </div>
+        <div id="mainSelection">
+          <div id="selection">
+            <label id="cater" for="catergory"><strong>Catergory:</strong></label>
+            <select id="select" name="snacks" required>
+          <option value="" disabled selected hidden>Select Catergory</option>
+          <option value="Candy">Candy</option>
+          <option value="choc">Chocolate</option>
+          <option value="chips">Chips</option>
+          <option value="drinks">Beverages</option>
+          <option value="drinks">Other</option>
+          </select>
+          </div>
+        </div>
+
+        <!--request form-->
+        <div id="box">
+          <div class="form-group">
+            <textarea class="form-control" id="description" placeholder="I'm looking for..." rows="15"></textarea>
+          </div>
+          <br>
+          <div id="requestChoice">
+            <button id="submit" role="button"><strong>Request</strong></button>
+            <button id="cancel" onclick="window.location.href = '/'" role="button"><strong>Cancel</strong></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer-nav">
+    </footer>
+  </div>
+
+
+  <script src="/js/dist/request.bundle.js"></script>
+</body>
+
+</html>

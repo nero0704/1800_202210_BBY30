@@ -20,6 +20,7 @@ function client() {
   });
 }
 
+// Ajax get to reach out to Node.js
 function ajaxGET(url, callback) {
 
   const xhr = new XMLHttpRequest();

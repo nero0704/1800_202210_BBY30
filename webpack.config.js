@@ -10,7 +10,12 @@ module.exports = {
     search: "./src/search.js",
     request: "./src/request.js",
     requestlist: "./src/request-list.js",
+<<<<<<<< HEAD:webpack.config.js
+    card: "./src/card.js",
+    account: "./src/account.js"
+========
     card: "./src/card.js"
+>>>>>>>> Dev:functions/webpack.config.js
   },
   // The location of the build folder described above
   output: {

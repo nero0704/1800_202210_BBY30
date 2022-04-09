@@ -1,0 +1,82 @@
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: #fff;
+    font-family: sans-serif;
+  }
+  .back a {
+    color: #800020;
+  }
+  h1 {
+    color: #800020;
+  }
+  p {
+    color: #800020;
+  }
+  #map {
+    height: 150px;
+    width: 1fr;
+    border: solid 1px #800020;
+    border-radius: 10px;
+  }
+  #ur {
+    color: #800020;
+  }
+  body {
+    margin: 0;
+  }
+  svg {
+    width: 6vw;
+    height: 6vw;
+  }
+  .container {
+    min-height: 92vh;
+  }
+  .cardcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 150px));
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    justify-content: center;
+  }
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: solid 1px #800020;
+    height: 150px;
+    width: 150px;
+    border-radius: 10px;
+  }
+  #type {
+    justify-self: center;
+    align-self: center;
+  }
+  .card:hover {
+    background-color: rgb(62, 62, 62);
+    color: white;
+    cursor: pointer;
+    transform: scale(1.03);
+    transition: all 1s ease;
+  }
+  #line {
+    border-bottom: solid 2px #fff;
+  }
+  footer {
+    display: grid;
+    background-color: #800020;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 8vh;
+    bottom: 0;
+    position: sticky;
+  }
+  footer a {
+    display: grid;
+    text-align: center;
+    text-decoration: none;
+    font-size: 150%;
+    align-items: center;
+    color: white;
+  }
+  footer a:active {
+    font-size: 200%;
+  }
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
+
+  <!-- Style -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/search.css">
+
+  <!-- Favicons -->
+  <link rel="icon" type="images/favicons" href="https://storage.cloud.google.com/taste-of-home/public/img/favicons/favicon-32x32.png" sizes="32x32">
+
+  <!-- Title -->
+  <title>Taste Of Home</title>
+
+
+
+</head>
+
+<body>
+
+
+
+
+
+  <div class="container">
+    <div class="search-container">
+      <div class="search">
+        <div class="icon"></div>
+        <div class="input">
+          <input type="text" placeholder="Search" id="mysearch" data-search>
+        </div>
+        <span class="clear" onclick="document.getElementById
+        ('mysearch').value = ''"></span>
+      </div>
+    </div>
+
+
+
+    <div id="line"></div>
+    <h1 id="popularsnacks">Popular Snacks</h1>
+    <div class="user-cards" user-cards></div>
+
+    <footer id="footer-nav">
+    </footer>
+    <template data-user-template>
+    <div class="card">
+      <p id="name" data-name></p>
+      <p id="snack" data-snack></p>
+      <p id="country" data-country></p>
+      <p id="adress" data-adress></p>
+    </div>
+  </template>
+
+  </div>
+
+
+
+
+  <script src="/js/dist/search.bundle.js"></script>
+
+</body>
+
+</html>
