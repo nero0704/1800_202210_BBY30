@@ -3,20 +3,10 @@
 
 <head>
 
-
-
   <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Font Awesome -->
-  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
-
-  <!-- Style -->
-  <link rel="stylesheet" href="/css/request.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Favicons -->
   <link rel="icon" type="images/favicons" href="https://storage.cloud.google.com/taste-of-home/public/img/favicons/favicon-16x16.png" sizes="16x16">
@@ -25,19 +15,21 @@
   <!-- Title -->
   <title>Taste Of Home</title>
 
-
+  <!-- Style -->
+  <link rel="stylesheet" href="/css/request.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/3da2767e3a.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-
-
-
-
   <div id="general-container">
-    <div id="overlay">
-    </div>
+
+    <div id="overlay"></div>
+
 
     <header>
       <p><strong>Taste</strong> of <strong>Home</strong></p>
@@ -45,19 +37,21 @@
       <a href="#Home" id="notification"><i class="fa-solid fa-bars"></i></a>
     </header>
 
-    <div id="main">
 
+    <div id="main">
       <div id="header">
         <strong>Requests</strong>
         <i class="fa-solid fa-plus" id="plus" onclick="window.location.href = '/requestForm'"></i>
       </div>
+
       <div id="request-list" request-list></div>
     </div>
 
-    <footer id="footer-nav">
-    </footer>
+    <footer id="footer-nav"></footer>
+
   </div>
 
+  <!-- Template for Request card -->
   <template data-request-template>
     <div class="requests">
       <strong id="title" data-title></strong>
@@ -66,7 +60,7 @@
     </div>
   </template>
 
-  <!-- Authentication javascript-->
+  <!-- Scripts -->
   <script src="/js/dist/requestlist.bundle.js"></script>
 
 </body>
