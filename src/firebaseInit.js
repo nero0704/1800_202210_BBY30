@@ -1,7 +1,10 @@
 import { initializeApp } from 'firebase/app';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+// This function initializes the firebase.
 function init() {
+  // Returns new promise to hold the execution 
+  // so that any firebase related functions don't execute until initialized.
   return new Promise((resolve, reject) => {
     const firebaseConfig = {
       apiKey: "AIzaSyBzVgKTLtYr-EncsGWaW1a1qbx1esxkQ14",

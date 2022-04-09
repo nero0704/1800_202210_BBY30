@@ -35,6 +35,7 @@
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     justify-content: center;
+    min-height: 72vh;
   }
   .card {
     display: grid;

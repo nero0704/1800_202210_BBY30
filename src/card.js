@@ -4,6 +4,7 @@ import { doc, collection, getDoc, getFirestore } from 'firebase/firestore';
 
 run();
 async function run() {
+  // Instantiates firebase object.
   ready(client);
   const user = await init()
     .catch((error) => {
@@ -12,6 +13,7 @@ async function run() {
     })
   const db = getFirestore();
 
+  // Grabs the localstorage data, name of the snack and the adress of the store.
   const snack = localStorage.getItem("name");
   const store = localStorage.getItem("adress");
 
@@ -22,6 +24,7 @@ async function run() {
   adress.innerHTML = store;
 }
 
+// Callback function/\.
 window.initMap = () => {
   initialize(codeAddress);
 }
@@ -29,6 +32,7 @@ window.initMap = () => {
 var geocoder;
 var map;
 
+// Instantiates the google map. This will initialize the google map.
 function initialize(callback) {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(-34.397, 150.644);
@@ -41,6 +45,7 @@ function initialize(callback) {
   callback();
 }
 
+// Geocodes the adress of the store location into Lat and Lng.
 function codeAddress() {
 
   const snack = localStorage.getItem("name");

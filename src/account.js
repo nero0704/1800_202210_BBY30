@@ -1,13 +1,13 @@
 import { init } from './firebaseInit.js';
 import { ready, client, ajaxGET } from './client.js';
-import { overlay } from './main-overlay.js';
-import { getFirestore, getDoc, updateDoc, doc, collection } from 'firebase/firestore';
+import { getFirestore, updateDoc, doc, collection } from 'firebase/firestore';
 
 var user, db, uid;
 
 run();
 
 async function run() {
+  // Instantiates firebase app.
   ready(client);
   user = await init()
     .catch((error) => {
@@ -18,9 +18,8 @@ async function run() {
   uid = user.uid;
 }
 
+// Displays Snack tags overlay.
 window.snackOverlay = async() => {
-  let snacks;
-
   ajaxGET("/new?format=snacks", (data) => {
     document.getElementById("overlay").innerHTML = data;
     document.getElementById("overlay").style.display = "grid";
@@ -34,8 +33,10 @@ window.snackOverlay = async() => {
         }
       });
     });
+
+    // Gathers tags that are active and puts it up on database.
     document.getElementById("done").addEventListener("click", () => {
-      snacks = document.getElementById("tags-container").getElementsByClassName("active");
+      const snacks = document.getElementById("tags-container").getElementsByClassName("active");
       let snacksData = [];
       for (let i = 0; i < snacks.length; i++) {
         snacksData.push(snacks[i].innerHTML);
@@ -43,13 +44,15 @@ window.snackOverlay = async() => {
       updateDoc(doc(collection(db, "users"), uid), {
         snacks: snacksData
       });
+
+      // Removes overlay.
       document.getElementById("overlay").innerHTML = "";
       document.getElementById("overlay").style.display = "none";
     });
   })
 }
 
-
+// Displays Countries tags overlay.
 window.countryOverlay = async() => {
   let countries;
 
@@ -66,6 +69,8 @@ window.countryOverlay = async() => {
         }
       });
     });
+
+    // Gathers tags that are active and puts it up on database.
     document.getElementById("next").addEventListener("click", () => {
       countries = document.getElementById("tags-container").getElementsByClassName("active");
       let countriesData = [];
@@ -75,6 +80,8 @@ window.countryOverlay = async() => {
       updateDoc(doc(collection(db, "users"), uid), {
         countries: countriesData,
       });
+
+      // Removes overlay.
       document.getElementById("overlay").innerHTML = "";
       document.getElementById("overlay").style.display = "none";
     });

@@ -1,18 +1,19 @@
-/* eslint linebreak-style: ["error", "windows"] */
-// https://expressjs.com/en/guide/routing.html
-
-
 // REQUIRES
 const express = require("express");
 const app = express();
 app.use(express.json());
 const fs = require("fs");
 
+// Static folders
+/* Apparently, these are not required as we have the version of cloud storage,
+ * however since we do not need the hosted version of the app, we decided to go with
+ * 1537 way.
+ */
 app.use("/js", express.static("./public/js"));
 app.use("/css", express.static("./public/css"));
 app.use("/img", express.static("./public/img"));
-app.get("/", function(req, res) {
 
+app.get("/", function(req, res) {
   const doc = fs.readFileSync("./public/html/main.html", "utf8");
   res.send(doc);
 });
@@ -22,6 +23,7 @@ app.get("/search", function(req, res) {
   res.send(doc);
 });
 
+// Shows navbar.
 app.get("/nav", function(req, res) {
   res.setHeader("Content-Type", "text/html");
   const doc = fs.readFileSync("./public/data/footer.html", "utf8");
@@ -38,6 +40,7 @@ app.get("/signup", function(req, res) {
   res.send(fs.readFileSync("./public/html/signup.html", "utf8"));
 });
 
+// Gets the overlay when a new user signs up.
 app.get("/new", function(req, res) {
   const formatOfResponse = req.query["format"];
 
