@@ -6,7 +6,7 @@ import { collection, getDocs, getFirestore, where, query } from 'firebase/firest
 run();
 
 async function run() {
-
+  // Instantiates firebase app
   ready(client);
   const user = await init()
     .catch((error) => {
@@ -19,12 +19,15 @@ async function run() {
   let snacks = []
   parse(searchBar);
 
+  // Pulls snacks data from firestore and displays it on the searching section.
   async function parse(callback) {
 
+    // Grabs list of snacks
     const querySnapshot = await getDocs(collection(db, "snacks"));
     const userCardTemplate = document.querySelector("[data-user-template]");
     const cardContainer = document.querySelector("[user-cards]");
 
+    // Parsing data into a data array.
     querySnapshot.forEach((doc) => {
       data.push({
         name: doc.id,
@@ -34,6 +37,8 @@ async function run() {
         adress: doc.data().store
       });
     })
+
+    // Creates a data map with the data.
     snacks = data.map(snack => {
       const card = userCardTemplate.content.cloneNode(true).children[0]
       const name = card.querySelector("[data-name]")
@@ -51,6 +56,7 @@ async function run() {
     })
     console.log(snacks)
 
+    // Creates a card and expand the card conatiner with it.
     const cards = document.querySelectorAll(".card");
     cards.forEach(card => {
       card.addEventListener("click", () => {
@@ -64,9 +70,7 @@ async function run() {
     callback();
   }
 
-
-
-
+  // When a user input is detected, make cards that have matching name, tag, or countries visible, and the rest invisible.
   function searchBar() {
     console.log("Create cards");
     const searchInput = document.getElementById("mysearch");

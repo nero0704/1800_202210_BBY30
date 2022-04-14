@@ -10,7 +10,7 @@ import { doc, setDoc, collection, getFirestore } from 'firebase/firestore';
 run();
 
 async function run() {
-
+  // Instantiates the firebase app.
   ready(client);
   const user = await init()
     .catch((error) => {
@@ -19,6 +19,7 @@ async function run() {
   const db = getFirestore();
   const auth = getAuth();
 
+  // Adds event listner to the input boxes so that login button is enabled once all fields are filled.
   const input = document.querySelectorAll("input");
   input.forEach((i) => {
     if (window.location.pathname == "/login") {
@@ -29,7 +30,7 @@ async function run() {
     }
   })
 
-  // Disable Login & Signup buttons while input field is empty.
+  // Disable Signup button while input field is empty.
   function disableSignup() {
     if (document.getElementById("login-email").value &&
       document.getElementById("login-password").value &&
@@ -44,6 +45,7 @@ async function run() {
     }
   }
 
+  // Disable Login button while input field is empty.
   function disableLogin() {
     if (document.getElementById("login-email").value &&
       document.getElementById("login-password").value) {
@@ -89,6 +91,7 @@ async function run() {
         // Signed in
         const user = userCredential.user;
         console.log(user);
+        // Creates user document with user id.
         await setDoc(doc(collection(db, "users"), user.uid), {
           email: document.getElementById("login-email").value,
           firstname: document.getElementById("login-first").value,
@@ -96,10 +99,11 @@ async function run() {
           username: document.getElementById("login-username").value
         })
         console.log("Successfully Signed up.");
-        localStorage.setItem('new', 'true');
-        window.location.href = "/";
+        localStorage.setItem('new', 'true'); // Sets a "new" Item in localstorage to instantiate the new user overlay.
+        window.location.href = "/"; // Moves to main page.
       })
       .catch((error) => {
+        // On exception
         const errorCode = error.code;
         alert(errorCode);
       });
@@ -109,12 +113,14 @@ async function run() {
   window.login = () => {
     signInWithEmailAndPassword(auth, document.getElementById("login-email").value, document.getElementById("login-password").value)
       .then((userCredential) => {
+        // Loged in
         console.log("Successfully Logged in.");
         const user = userCredential.user;
         console.log(user);
-        window.location.href = "/";
+        window.location.href = "/"; // Moves to main page.
       })
       .catch((error) => {
+        // On exception
         const errorCode = error.code;
         alert(errorCode);
       });
